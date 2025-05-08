@@ -40,7 +40,7 @@ def knowledge(topic):
     print(f"\nKruskal-Wallis Test: H = {stat:.4f}, p = {p:.4f}")
 
     # Boxplot
-    sns.boxplot(data=df, x='A', y='Time')
+    df.boxplot('Time', by='A')
     plt.title(f'Response Time by Knowledge Level: {topic}')
     plt.xlabel('Knowledge Level')
     plt.ylabel('Time')

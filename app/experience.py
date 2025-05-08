@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 def experience():
     # Carregar os dados
-    exp_participant = pd.read_csv('./files/Data - csvToDB.Survey.csv', usecols=['Code', 'Experience'])
+    exp_participant = pd.read_csv('./docs/Data - csvToDB.Survey.csv', usecols=['Code', 'Experience'])
 
     # Agrupar e contar as ocorrências por experiência
     Pie = exp_participant.groupby('Experience').count()
@@ -32,7 +32,7 @@ def experience():
 
 def experienceByTime():
     # Load the dataset
-    result = pd.read_csv('./files/Result.csv')
+    result = pd.read_csv('./docs/Result.csv')
     df = pd.DataFrame(result[['Time', 'Experience']])
 
     # Replace Portuguese labels with English equivalents
