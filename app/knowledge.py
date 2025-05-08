@@ -17,7 +17,7 @@ def knowledge(topic):
     mapping = {
         'Nunca ouvi falar': 'Low',
         'Já ouvi falar': 'Low',
-        'Conheço o tópico': 'Normal',
+        'Conheço o tópico': 'Medium',
         'Consigo ministrar': 'High',
         'Sou especialista': 'High'
     }
