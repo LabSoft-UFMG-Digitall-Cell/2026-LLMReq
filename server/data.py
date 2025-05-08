@@ -1,5 +1,10 @@
-
 import pandas as pd
+
+def conectDB():
+    # Connect to the database
+    import sqlite3
+    conn = sqlite3.connect('./database/participants.db')
+    return conn
 
 def generateResults():
     survey = pd.read_csv("./Data - csvToDB.Survey.csv")
