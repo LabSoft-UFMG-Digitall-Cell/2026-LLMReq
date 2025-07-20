@@ -15,7 +15,8 @@ def knowledgeHeatMap():
 
 def knowledgeSpecificByTime(topic):
     # Object-Oriented Programming	
-    # Software Architecture	Web Technologies	
+    # Software Architecture	Web Technologies
+    # Web Tecnologies	
     # Database Systems
     # Software Project Management	
     # Requirements Engineering or Software Analysis	
@@ -55,6 +56,15 @@ def knowledgeSpecificByTime(topic):
     else:
         message = 'The level of knowledge in the topic have a statistically significant impact on the response time.'
 
+    plt.figure(figsize=(8, 6))
+    df.boxplot('Time', by='A', grid=False)
+    plt.title(f'')
+    plt.suptitle('')  # Remove the default title
+    plt.xlabel('Knowledge Level')
+    plt.ylabel('Time')
+    plt.tight_layout()
+    plt.show()
+
     return df, message
 
 def knowledgeBoxplot(topic):
@@ -68,7 +78,7 @@ def knowledgeBoxplot(topic):
     Returns:
     None: Displays the boxplot.
     """
-    df, message = knowledgeTest(topic)
+    df, message = knowledgeSpecificByTime(topic)
     print(df)
 
     # Boxplot

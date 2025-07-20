@@ -3,32 +3,47 @@ from scipy.stats import shapiro, kruskal
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+import pandas as pd
+import matplotlib.pyplot as plt
+
 def experience():
     # Load the data
     exp_participant = pd.read_csv('./docs/Data - csvToDB.Survey.csv', usecols=['Code', 'Experience'])
 
+    # Map the labels to English
+    label_map = {
+        'Até 1 ano de experiência': 'Up to 1 year',
+        '1 a 3 anos de experiência': '1 to 3 years',
+        'Mais de 3 anos de experiência': 'More than 3 years',
+        'Não, nunca trabalhei em uma empresa de desenvolvimento de software': 'No experience'
+    }
+    exp_participant['Experience'] = exp_participant['Experience'].map(label_map)
+
     # Group and count occurrences by experience
     Pie = exp_participant.groupby('Experience').count()
 
-    # Add missing category if necessary
-    if 'More than 3 years' not in Pie.index:
-        Pie.loc['More than 3 years'] = 0
+    # Drop "More than 3 years" if not present
+    Pie = Pie.drop('More than 3 years', errors='ignore')
 
-    # Sort indexes
-    Pie = Pie.sort_index()
+    # Optional: sort in a custom logical order
+    order = ['No experience', 'Up to 1 year', '1 to 3 years']
+    Pie = Pie.reindex([label for label in order if label in Pie.index])
 
-    # Create bar chart
+    # Create bar chart in grayscale
     plt.figure(figsize=(8, 6))
-    bars = plt.bar(range(len(Pie)), Pie['Code'], color='skyblue')
+    bars = plt.bar(range(len(Pie)), Pie['Code'], color='gray')
 
-    # Replace real labels with simplified ones
-    plt.xticks(range(len(Pie)), ['1 to 3 years', 'Up to 1 year', 'More than 3 years', 'No experience'])
+    # Set font sizes (default + 2)
+    plt.xticks(range(len(Pie)), Pie.index, fontsize=12)      # Tick labels
+    plt.yticks(fontsize=12)
+    plt.xlabel('Experience', fontsize=14)
+    plt.ylabel('Number of Participants', fontsize=14)
+    plt.title("Participants' Experience Distribution", fontsize=16)
 
-    plt.xlabel('Experience (coded)')
-    plt.ylabel('Number of Participants')
-    plt.title('Participants\' Experience Distribution')
     plt.tight_layout()
     plt.show()
+
+
 
 def experienceByTime():
     # Load the dataset
