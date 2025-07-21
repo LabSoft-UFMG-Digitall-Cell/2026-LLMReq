@@ -9,7 +9,9 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql  # Add SQL script
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./participants.csv:/docker-entrypoint-initdb.d/participants.csv
+      - ./tasks.csv:/docker-entrypoint-initdb.d/tasks.csv
 
   api:
     build: ./server

@@ -1,6 +1,6 @@
--- Create participants table
-CREATE TABLE participants (
-    code VARCHAR PRIMARY KEY,
+-- Create the participants table
+CREATE TABLE IF NOT EXISTS participants (
+    code TEXT,
     institution TEXT,
     course TEXT,
     prog_oo TEXT,
@@ -22,18 +22,22 @@ CREATE TABLE participants (
     link TEXT
 );
 
--- Create tasks table
-CREATE TABLE tasks (
-    id SERIAL PRIMARY KEY,
-    code VARCHAR,
+-- Load participants data
+-- COPY participants FROM '/docker-entrypoint-initdb.d/participants.csv' DELIMITER ',' CSV HEADER;
+
+-- Create the tasks table
+CREATE TABLE IF NOT EXISTS tasks (
+    code TEXT,
     task_id TEXT,
     llm TEXT,
     description TEXT,
     main_flow TEXT,
     alt_flow TEXT,
-    time INTEGER,
-    grad_phd INTEGER,
+    time INT,
+    grad_phd INT,
     note01 TEXT,
-    note02 TEXT,
-    FOREIGN KEY (code) REFERENCES participants(code)
+    note02 TEXT
 );
+
+-- Load tasks data
+-- COPY tasks FROM '/docker-entrypoint-initdb.d/tasks.csv' DELIMITER ',' CSV HEADER;
