@@ -1,8 +1,15 @@
-# routers/api.py
+# routers/database.py
 from fastapi import APIRouter, Depends
-from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import text
-from database import SessionLocal
+from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
+from sqlalchemy.orm import sessionmaker, declarative_base
+import os
+
+DATABASE_URL = os.getenv("DATABASE_URL").replace("postgresql://", "postgresql+asyncpg://")
+
+engine = create_async_engine(DATABASE_URL, echo=True)
+SessionLocal = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
+Base = declarative_base()
 
 router = APIRouter()
 
