@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS participants (
 );
 
 -- Load participants data
--- COPY participants FROM '/docker-entrypoint-initdb.d/participants.csv' DELIMITER ',' CSV HEADER;
+COPY participants FROM '/docker-entrypoint-initdb.d/participants.csv' DELIMITER ',' CSV HEADER;
 
 -- Create the tasks table
 CREATE TABLE IF NOT EXISTS tasks (
@@ -40,4 +40,4 @@ CREATE TABLE IF NOT EXISTS tasks (
 );
 
 -- Load tasks data
--- COPY tasks FROM '/docker-entrypoint-initdb.d/tasks.csv' DELIMITER ',' CSV HEADER;
+COPY tasks FROM '/docker-entrypoint-initdb.d/tasks.csv' DELIMITER ',' CSV HEADER;

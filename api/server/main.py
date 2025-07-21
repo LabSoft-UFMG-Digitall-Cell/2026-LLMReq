@@ -26,3 +26,6 @@ async def check_tables(db: AsyncSession = Depends(get_db)):
     tables = [row[0] for row in result.fetchall()]
     return {"existing_tables": tables}
 
+
+
+
