@@ -1,5 +1,9 @@
--- Create the participants table
-CREATE TABLE IF NOT EXISTS participants (
+-- =======================
+-- Create participants table
+-- =======================
+DROP TABLE IF EXISTS participants;
+
+CREATE TABLE participants (
     code TEXT,
     institution TEXT,
     course TEXT,
@@ -10,6 +14,7 @@ CREATE TABLE IF NOT EXISTS participants (
     sw_project_mgmt TEXT,
     requirements TEXT,
     agile_methods TEXT,
+    llm_usage TEXT,
     experience TEXT,
     positive_llm TEXT,
     negative_llm TEXT,
@@ -23,10 +28,22 @@ CREATE TABLE IF NOT EXISTS participants (
 );
 
 -- Load participants data
-COPY participants FROM '/docker-entrypoint-initdb.d/participants.csv' DELIMITER ',' CSV HEADER;
+COPY participants
+FROM '/docker-entrypoint-initdb.d/data/participants.csv'
+WITH (
+    FORMAT csv,
+    DELIMITER ',',
+    HEADER,
+    QUOTE '"'
+);
 
--- Create the tasks table
-CREATE TABLE IF NOT EXISTS tasks (
+
+-- =======================
+-- Create tasks table
+-- =======================
+DROP TABLE IF EXISTS tasks;
+
+CREATE TABLE tasks (
     code TEXT,
     task_id TEXT,
     llm TEXT,
@@ -40,4 +57,11 @@ CREATE TABLE IF NOT EXISTS tasks (
 );
 
 -- Load tasks data
-COPY tasks FROM '/docker-entrypoint-initdb.d/tasks.csv' DELIMITER ',' CSV HEADER;
+COPY tasks
+FROM '/docker-entrypoint-initdb.d/data/tasks.csv'
+WITH (
+    FORMAT csv,
+    DELIMITER ',',
+    HEADER,
+    QUOTE '"'
+);

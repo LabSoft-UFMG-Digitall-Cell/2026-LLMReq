@@ -7,7 +7,8 @@ services:
       POSTGRES_DB: mydatabase
     volumes:
       - pgdata:/var/lib/postgresql/data
-      - ./data/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./server/data/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./server/data:/docker-entrypoint-initdb.d/data
     ports:
       - "5432:5432"
 
@@ -15,7 +16,7 @@ services:
     build: ./server
     depends_on:
       - db
-    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
     environment:
       DATABASE_URL: postgresql://user:password@db:5432/mydatabase
     volumes:

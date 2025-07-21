@@ -2,6 +2,8 @@ from fastapi import FastAPI, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import text
 from database import SessionLocal, engine, Base
+import csv
+import os
 
 app = FastAPI()
 
@@ -26,6 +28,20 @@ async def check_tables(db: AsyncSession = Depends(get_db)):
     tables = [row[0] for row in result.fetchall()]
     return {"existing_tables": tables}
 
+@app.get("/participants")
+async def get_participants(db: AsyncSession = Depends(get_db)):
+    result = await db.execute(text("""
+        SELECT * FROM participants
+    """))
+    participants = [row[0:19] for row in result.fetchall()]
 
+    return {"Participants": participants}
 
+@app.get("/tasks")
+async def get_participants(db: AsyncSession = Depends(get_db)):
+    result = await db.execute(text("""
+        SELECT * FROM tasks
+    """))
+    tasks = [row[0:9] for row in result.fetchall()]
 
+    return {"Tasks": tasks}
