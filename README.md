@@ -4,3 +4,5 @@
 - sudo docker stop $(docker ps -a -q)
 - sudo docker system prune -a --volumes
 - docker exec -it api-db-1 psql -U user -d mydatabase
+- docker compose down -v  # remove volumes to force re-initialization
+- docker compose up --build
