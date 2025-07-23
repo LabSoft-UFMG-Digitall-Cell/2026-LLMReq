@@ -110,3 +110,42 @@ def experience():
     plt.tight_layout()
     plt.savefig("./figs/experience.png")
 
+def specific_knowledge_by_time(topic = 'requirements'):
+    # Step 1: Request data from the API with topic as a query param
+    url = "http://localhost:8000/results"
+    headers = {"accept": "application/json"}
+    params = {"topic": topic}
+    response = requests.get(url, headers=headers, params=params)
+
+    # Step 2: Extract and convert to DataFrame
+    data = response.json()
+    results = data.get("Results", data)  # Handle wrapped or direct response
+    df = pd.DataFrame(results)
+
+    # Step 3: Rename the column of interest to a common name 'A' if needed
+    # You may skip this if column is already 'A'
+    df = df.rename(columns={topic: 'A'})
+
+    # Step 4: Map string values to categories
+    mapping = {
+        '1': 'Low',
+        '2': 'Low',
+        '3': 'Medium',
+        '4': 'High',
+        '5': 'High'
+    }
+    df['A'] = df['A'].astype(str).replace(mapping)
+
+    # ✅ Now df['A'] contains the labels Low / Medium / High
+    # print(df[['code', 'A']].head())
+
+    
+    #Plot boxplot
+    plt.figure(figsize=(8, 6))
+    df.boxplot('time', by='A', grid=False)
+    plt.title(f'Knowledge Level Impact on Response Time')
+    plt.suptitle('')  # Remove the default title
+    plt.xlabel(f'Knowledge Level on {topic} ')
+    plt.ylabel('Time (minutes)')
+    plt.tight_layout()
+    plt.savefig(f"./figs/{topic}_knowledge_time.png")
