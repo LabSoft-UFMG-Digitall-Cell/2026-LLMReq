@@ -38,3 +38,14 @@ async def get_tasks(db: AsyncSession = Depends(get_db)):
     result = await db.execute(text("SELECT * FROM tasks"))
     tasks = result.mappings().all()  # <- Use mappings()
     return {"Tasks": [dict(row) for row in tasks]}
+
+@router.get("/results")
+async def get_results(db: AsyncSession = Depends(get_db)):
+    query = text("""
+        SELECT p.code, p.prog_oo, p.soft_arch, p.web_tech, p.db_systems, p.sw_project_mgmt, p.requirements, p.agile_methods, p.llm_usage, t.time
+        FROM participants p
+        JOIN tasks t ON p.code = t.code
+    """)
+    result = await db.execute(query)
+    rows = result.mappings().all()
+    return {"Results": [dict(row) for row in rows]}

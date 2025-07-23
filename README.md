@@ -1,8 +1,14 @@
 # Sbes-2025-LLMReq
 
+## Run
+- docker compose up --build
+
+## Usage
+Navigate to the client folder, run main.py, and choose a graph to display.
+
 ## Docker Commands
 - sudo docker stop $(docker ps -a -q)
 - sudo docker system prune -a --volumes
 - docker exec -it api-db-1 psql -U user -d mydatabase
 - docker compose down -v  # remove volumes to force re-initialization
-- docker compose up --build
+- docker compose up --build -d # run in detach mode
