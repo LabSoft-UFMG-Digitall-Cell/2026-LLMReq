@@ -65,4 +65,4 @@ def knowledge_distribuition():
     ax.legend(title='Knowledge Level', bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
 
     plt.tight_layout()
-    plt.savefig("./figs/knowledge_distribution.png")
+    plt.savefig("./figs/KnowledgParticipants.png")
