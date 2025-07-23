@@ -1,6 +1,7 @@
 import requests
 import pandas as pd
 import matplotlib.pyplot as plt
+from collections import Counter
 
 def knowledge_distribuition():
     url = "http://localhost:8000/participants"
@@ -66,3 +67,46 @@ def knowledge_distribuition():
 
     plt.tight_layout()
     plt.savefig("./figs/KnowledgParticipants.png")
+
+def experience():
+    url = "http://localhost:8000/participants"
+    headers = {"accept": "application/json"}
+    response = requests.get(url, headers=headers)
+    participants = response.json()["Participants"]
+
+    # Step 2: Extract and map experience values
+    experience = [entry['experience'] for entry in participants]
+
+    label_map = {
+        'Até 1 ano de experiência': 'Up to 1 year',
+        '1 a 3 anos de experiência': '1 to 3 years',
+        'Mais de 3 anos de experiência': 'More than 3 years',
+        'Não, nunca trabalhei em uma empresa de desenvolvimento de software': 'No experience'
+    }
+    experience = [label_map.get(exp, exp) for exp in experience]
+
+    # Step 3: Count and sort
+    counts = Counter(experience)
+    sorted_items = sorted(counts.items(), key=lambda x: x[1], reverse=True)
+    labels, values = zip(*sorted_items)
+
+    # Step 4: Grayscale colors
+    gray_colors = ['#f2f2f2', '#c0c0c0', '#8c8c8c', '#404040']  # Adjust to number of categories
+    colors = gray_colors[:len(labels)]
+
+    # Step 5: Plot the bar chart
+    plt.figure(figsize=(8, 5))
+    bars = plt.bar(labels, values, color=colors, edgecolor="black")
+
+    # Add values on top of bars
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width()/2, height + 0.1, str(height), ha='center', va='bottom')
+
+    plt.title("Participants by Experience Level")
+    plt.xlabel("Experience")
+    plt.ylabel("Number of Participants")
+    plt.xticks(rotation=15)
+    plt.tight_layout()
+    plt.savefig("./figs/experience.png")
+
