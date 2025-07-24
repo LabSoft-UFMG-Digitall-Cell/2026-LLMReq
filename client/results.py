@@ -47,3 +47,20 @@ def boxplotLLM(column):
         plt.legend()
         plt.tight_layout()
         plt.savefig("./figs/boxplot_grade_llm.png")
+
+
+def positive_usage_llm():
+    # Get tasks data from FastAPI
+    url = "http://localhost:8000/llm_usage"
+    headers = {"accept": "application/json"}
+    response = requests.get(url, headers=headers)
+    participants = response.json()["Participants"]
+
+    # Convert to DataFrame
+    df = pd.DataFrame(participants)
+
+    # Filter for positive LLM usage
+    positive_llm_usage = df[df['llm'] == 'Com o uso de LLM']
+
+    # Return the DataFrame with positive LLM usage
+    return positive_llm_usage

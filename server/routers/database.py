@@ -49,3 +49,9 @@ async def get_results(db: AsyncSession = Depends(get_db)):
     result = await db.execute(query)
     rows = result.mappings().all()
     return {"Results": [dict(row) for row in rows]}
+
+@router.get("/llm_usage")
+async def get_results(db: AsyncSession = Depends(get_db)):
+    result = await db.execute(text("SELECT code, positive_llm, negative_llm FROM participants"))
+    rows = result.mappings().all()
+    return {"Usage" : [dict(row) for row in rows]}
