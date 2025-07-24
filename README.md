@@ -9,6 +9,6 @@ Navigate to the client folder, run main.py, and choose a graph to display.
 ## Docker Commands
 - sudo docker stop $(docker ps -a -q)
 - sudo docker system prune -a --volumes
-- docker exec -it api-db-1 psql -U user -d mydatabase
-- docker compose down -v  # remove volumes to force re-initialization
-- docker compose up --build -d # run in detach mode
+- sudo docker exec -it api-db-1 psql -U user -d mydatabase
+- sudo docker compose down -v  # remove volumes to force re-initialization
+- sudo docker compose up --build -d # run in detach mode
