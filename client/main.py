@@ -1,5 +1,5 @@
 from participants_characterization import knowledge_distribuition, experience, specific_knowledge_by_time
-from results import boxplotLLM
+from results import boxplotLLM, positive_usage_llm
 
 if __name__ == "__main__":
     print("This is the main entry point for the client API.")
@@ -9,6 +9,7 @@ if __name__ == "__main__":
                     "3 - Boxplot LLM usage by time\n" \
                     "4 - Boxplot LLM usage by grade\n" \
                     "5 - Specific Knowledge by Topic\n" \
+                    "6 - Positive LLM usage diagram\n" \
                     "0 - Exit\n")
     
     if graph == "1":
@@ -27,5 +28,8 @@ if __name__ == "__main__":
         topic = 'requirements'
         print(f"Generating Specific Knowledge by Time graph for topic: {topic}...")
         specific_knowledge_by_time(topic)
+    elif graph == "6":
+        print("Generating Positive LLM usage diagram...")
+        positive_usage_llm()
     elif graph == "0":
         print("Exiting...")

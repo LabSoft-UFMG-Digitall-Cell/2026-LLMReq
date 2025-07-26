@@ -20,9 +20,11 @@
 18  P019                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Nem se dar o trabalho de ver o que foi gerado
 
 Category;	Occurrences;	Participants (IDs);
-Overdependence / Reduced Learning;	9;	P001, P002, P003, P004, P005, P011, P015, P016, P017;
-Generic / Inaccurate Answers;	8;	P001, P003, P007, P008, P010, P011, P012, P018;
-Lack of Critical Thinking / Review;	5;	P013, P014, P018, P019, P004;
-Loss of Personal Authorship;	4;	P005, P009, P014, P015;
-Misinterpretation / Misalignment;	4;	P005, P010, P012, P018;
-Reduced Creativity;	2;	P009, P017;
+Overdependence, "Reduced Learning",	9;	P001, P002, P003, P004, P005, P011, P015, P016, P017;
+Generic, "Inaccurate Answers"	8;	P001, P003, P007, P008, P010, P011, P012, P018;
+"Lack of Critical Thinking", Review,	5;	P013, P014, P018, P019, P004;
+"Loss of Personal Authorship",	4;	P005, P009, P014, P015;
+Misinterpretation, Misalignment,	4;	P005, P010, P012, P018;
+"Reduced Creativity",	2;	P009, P017;
+
+Overdependence, "Reduced Learning", Generic, "Inaccurate Answers", "Lack of Critical Thinking", "Loss of Personal Authorship", Misinterpretation Misalignment, "Reduced Creativity"

@@ -1,6 +1,8 @@
 import requests
 import pandas as pd
 import matplotlib.pyplot as plt
+import plotly.express as px
+import pandas as pd
 
 def boxplotLLM(column):
     # Get tasks data from FastAPI
@@ -50,17 +52,60 @@ def boxplotLLM(column):
 
 
 def positive_usage_llm():
-    # Get tasks data from FastAPI
-    url = "http://localhost:8000/llm_usage"
-    headers = {"accept": "application/json"}
-    response = requests.get(url, headers=headers)
-    participants = response.json()["Participants"]
+    data = [
+        ("P001", ["Speed", "Standardization", "Ease"], "Time"),
+        ("P002", ["Speed", "Ease", "Ideas"], "Time"),
+        ("P003", ["Time", "Creativity", "Inspiration"], "Quality"),
+        ("P004", ["Ease", "Time", "Agility"], "Time"),
+        ("P005", ["Agility", "Clarity", "Organization"], "Quality"),
+        ("P006", ["Speed", "Precision"], "Time"),
+        ("P007", ["Speed", "Standardization"], "Time"),
+        ("P008", ["Speed"], "Time"),
+        ("P009", ["Ease", "Interpretation", "Examples"], "Quality"),
+        ("P010", ["Speed", "Practicality"], "Time"),
+        ("P011", ["Practicality", "Speed", "Assistance"], "Quality"),
+        ("P012", ["Practicality", "Perspectives", "Clarity"], "Quality"),
+        ("P013", ["Agility", "Practicality", "Discovery"], "Time"),
+        ("P014", ["Speed", "Support", "Productivity"], "Time"),
+        ("P015", ["Speed", "Dynamism"], "Time"),
+        ("P016", ["Ease", "Clarity", "Speed"], "Time"),
+        ("P017", ["Creativity", "Ideas", "Speed"], "Quality"),
+        ("P018", ["Speed", "Clarity", "Standardization"], "Quality"),
+        ("P019", ["Ease", "Time", "Efficiency"], "Time"),
+        ("P020", ["Agility", "Clarity", "Creativity"], "Quality"),
+        ("P021", ["Speed", "Precision", "Correction"], "Time"),
+        ("P022", ["Speed"], "Time"),
+        ("P023", ["Speed", "Novelty", "Discovery"], "Time"),
+        ("P024", ["Speed", "Practicality"], "Time"),
+        ("P025", ["Ideas", "Correction", "Context"], "Quality"),
+        ("P026", ["Speed", "Insights", "Agility"], "Time"),
+        ("P027", ["Speed"], "Time"),
+        ("P028", ["Speed", "Quality"], "Quality"),
+    ]
 
-    # Convert to DataFrame
-    df = pd.DataFrame(participants)
+    rows = []
+    for _, keywords, class2 in data:
+        for keyword in keywords:
+            rows.append({
+                "Benefits": "Benefits of using LLMs",
+                "class01": keyword,
+                "class02": class2
+            })
 
-    # Filter for positive LLM usage
-    positive_llm_usage = df[df['llm'] == 'Com o uso de LLM']
+    df = pd.DataFrame(rows)
+    df_counts = df.groupby(["Benefits", "class01", "class02"]).size().reset_index(name="count")
 
-    # Return the DataFrame with positive LLM usage
-    return positive_llm_usage
+    fig = px.sunburst(
+        df_counts,
+        path=["Benefits", "class01", "class02"],
+        values="count",
+        title="Hierarchical Diagram: Benefits -> class01 -> class02",
+        color="class02",
+        color_discrete_map={"Time": "lightblue", "Quality": "lightgreen"}
+    )
+
+    fig.show()
+
+
+
+positive_usage_llm()
