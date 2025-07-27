@@ -49,6 +49,11 @@ def boxplotLLM(column):
         plt.legend()
         plt.tight_layout()
         plt.savefig("./figs/boxplot_grade_llm.png")
+    elif column == 'grad_llm':
+        plt.ylabel("LLM Grade")
+        plt.legend()
+        plt.tight_layout()
+        plt.savefig("./figs/boxplot_grade_by_llm.png")
 
 
 def positive_usage_llm():
@@ -105,7 +110,3 @@ def positive_usage_llm():
     )
 
     fig.show()
-
-
-
-positive_usage_llm()

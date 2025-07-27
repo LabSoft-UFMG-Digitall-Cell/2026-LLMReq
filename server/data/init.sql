@@ -1,6 +1,3 @@
--- =======================
--- Create participants table
--- =======================
 DROP TABLE IF EXISTS participants;
 
 CREATE TABLE participants (
@@ -27,7 +24,6 @@ CREATE TABLE participants (
     link TEXT
 );
 
--- Load participants data
 COPY participants
 FROM '/docker-entrypoint-initdb.d/data/participants.csv'
 WITH (
@@ -37,14 +33,11 @@ WITH (
     QUOTE '"'
 );
 
-
--- =======================
--- Create tasks table
--- =======================
 DROP TABLE IF EXISTS tasks;
 
 CREATE TABLE tasks (
     code TEXT,
+    "group" TEXT,
     task_id TEXT,
     llm TEXT,
     description TEXT,
@@ -53,10 +46,11 @@ CREATE TABLE tasks (
     time INT,
     grad_phd INT,
     note01 TEXT,
-    note02 TEXT
+    note02 TEXT,
+    grad_llm FLOAT,
+    note_llm TEXT
 );
 
--- Load tasks data
 COPY tasks
 FROM '/docker-entrypoint-initdb.d/data/tasks.csv'
 WITH (

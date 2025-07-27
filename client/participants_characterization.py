@@ -101,12 +101,28 @@ def experience():
     # Add values on top of bars
     for bar in bars:
         height = bar.get_height()
-        plt.text(bar.get_x() + bar.get_width()/2, height + 0.1, str(height), ha='center', va='bottom')
+        plt.text(
+            bar.get_x() + bar.get_width()/2,
+            height + 0.1,
+            str(height),
+            ha='center',
+            va='bottom',
+            fontsize=12
+        )
 
-    plt.title("Participants by Experience Level")
-    plt.xlabel("Experience")
-    plt.ylabel("Number of Participants")
-    plt.xticks(rotation=15)
+    # Titles and labels
+    plt.title("Participants by Experience Level", fontsize=18)
+    plt.xlabel("Experience", fontsize=16)
+    plt.ylabel("Number of Participants", fontsize=16)
+
+    # Ticks
+    plt.xticks(rotation=17, fontsize=14)
+    plt.yticks(fontsize=14)
+
+    # Ajusta o limite do eixo Y para evitar que os números no topo das barras sejam cortados
+    max_value = max(values)
+    plt.ylim(top=max_value + 1.5)  # você pode ajustar o valor se necessário
+
     plt.tight_layout()
     plt.savefig("./figs/experience.png")
 

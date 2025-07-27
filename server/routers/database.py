@@ -50,8 +50,8 @@ async def get_results(db: AsyncSession = Depends(get_db)):
     rows = result.mappings().all()
     return {"Results": [dict(row) for row in rows]}
 
-@router.get("/llm_usage")
+@router.get("/llm_grades")
 async def get_results(db: AsyncSession = Depends(get_db)):
-    result = await db.execute(text("SELECT code, positive_llm, negative_llm FROM participants"))
+    result = await db.execute(text("SELECT llm, grad_llm FROM tasks"))
     rows = result.mappings().all()
-    return {"Usage" : [dict(row) for row in rows]}
+    return {"Grades" : [dict(row) for row in rows]}

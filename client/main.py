@@ -10,6 +10,7 @@ if __name__ == "__main__":
                     "4 - Boxplot LLM usage by grade\n" \
                     "5 - Specific Knowledge by Topic\n" \
                     "6 - Positive LLM usage diagram\n" \
+                    "7 - Boxplot LLM usage by LLM grade\n" \
                     "0 - Exit\n")
     
     if graph == "1":
@@ -31,5 +32,8 @@ if __name__ == "__main__":
     elif graph == "6":
         print("Generating Positive LLM usage diagram...")
         positive_usage_llm()
+    elif graph == "7":
+        print("Generating Boxplot for LLM usage by LLM grade...")
+        boxplotLLM('grad_llm')
     elif graph == "0":
         print("Exiting...")
