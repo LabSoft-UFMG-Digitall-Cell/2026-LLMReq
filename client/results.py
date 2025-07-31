@@ -44,7 +44,7 @@ def boxplotLLM(column):
         plt.legend()
         plt.tight_layout()
         plt.savefig("./figs/boxplot_time_llm.png")
-    elif column == 'grad_phd':
+    elif column == 'grad_mean':
         plt.ylabel("Grade")
         plt.legend()
         plt.tight_layout()

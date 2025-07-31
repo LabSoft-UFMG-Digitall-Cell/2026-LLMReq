@@ -1,5 +1,5 @@
-code,task_id,llm,description,main_flow,alt_flow,time,grad_phd,note01,note02
-P001,1 - TechFix,Com o uso de LLM,"Título: Cadastro de chamado técnico por usuário
+code,group,task_id,llm,description,main_flow,alt_flow,time,grad_phd,note01,note02,grad_llm,note_llm
+P001,G2,1 - TechFix,Com o uso de LLM,"Título: Cadastro de chamado técnico por usuário
 DESCRIÇÃO
 EU COMO: Usuário com problema técnico
 GOSTARIA DE: Registrar um chamado descrevendo meu problema
@@ -18,8 +18,8 @@ QUANDO: o usuário clica no botão ""Enviar chamado""
 ENTÃO: o sistema impede o envio do chamado
 E exibe mensagens de erro indicando quais campos precisam ser preenchidos
 
-",6,10,,
-P002,1 - TechFix,Sem o uso de LLM,"Título: Notificação enviada após solicitação do usuário.
+",6,10,,,91.5,"Muito bem estruturado, segue o template à risca, fluxos claros; faltou elemento inovador (ranking, pontos)."
+P002,G1,1 - TechFix,Sem o uso de LLM,"Título: Notificação enviada após solicitação do usuário.
 Descrição: O sistema irá enviar notificações aos especialistas a cada solicitação realizada por um usuário.
 Eu como Bernardo
 Gostaria de obter notificações
@@ -31,8 +31,8 @@ ENTÃO: <Os especialistas receberão a notificação que o usuário relatou um p
 DADO QUE: < O usuário tenta enviar uma solicitação, mas está sem conexão com a internet>
 E … E … < O especialista esteja corretamente cadastrado no sistema>
 QUANDO: < A solicitação não pode ser enviada imediatamente devido à falta de conexão>
-ENTÃO: <Sistema armazenará a solicitação localmente e enviará a notificação aos especialistas assim que a conexão for restabelecida> ",19,5,,
-P003,1 - TechFix,Sem o uso de LLM,"Submeter um problema técnico na plataforma
+ENTÃO: <Sistema armazenará a solicitação localmente e enviará a notificação aos especialistas assim que a conexão for restabelecida> ",19,5,,,75,"A estrutura de caso de uso está adequada, mas houve pequenas falhas de formatação e escopo. Entregou o básico de notificações sem conectar com diferenciais do TechFix."
+P003,G1,1 - TechFix,Sem o uso de LLM,"Submeter um problema técnico na plataforma
 EU COMO usuário 
 GOSTARIA DE submeter problemas técnicos na plataforma 
 PARA que outros usuários consigam visualizá-los e submeter suas soluções.","Caso de Uso Principal
@@ -44,8 +44,8 @@ ENTÃO o meu problema estará salvo no banco de dados da plataforma para que ass
 DADO QUE eu entrei na plataforma como usuário anônimo
 E eu preenchi os detalhes a respeito do problema técnico em um formulário
 QUANDO eu clicar no botão submeter
-ENTÃO o meu problema estará salvo no banco de dados da plataforma para que assim outros usuários consigam visualizá-lo. ",19,5,O conceito de caso de uso alternativo não foi bem entendido.,
-P004,1 - TechFix,Sem o uso de LLM,"TEMPLATE:
+ENTÃO o meu problema estará salvo no banco de dados da plataforma para que assim outros usuários consigam visualizá-lo. ",19,5,O conceito de caso de uso alternativo não foi bem entendido.,,79,"Correto, mas fluxo alternativo para usuário anônimo repete principal (deveria bloquear ou solicitar login)."
+P004,G1,1 - TechFix,Sem o uso de LLM,"TEMPLATE:
 DESCRIÇÃO:<Cadastro>
 EU COMO: <Carlos>
 GOSTARIA DE: <Cadastrar chamados>
@@ -57,8 +57,8 @@ ENTÃO: <Eu tenha sugestão para resolver>","CASOS DE USO (Fluxo Alternativo)
 DADO QUE: <o problema cadastrado já exista>
 E … E … <já existe uma solução>
 QUANDO: <o chamado é enviado>
-ENTÃO: <o sistema exibe uma sugestão para o chamado> ",14,5,Não usou o template corretamente,
-P005,1 - TechFix,Sem o uso de LLM,"Título: Avaliação de Soluções Técnicas
+ENTÃO: <o sistema exibe uma sugestão para o chamado> ",14,5,Não usou o template corretamente,,64.5,"Preenche o mínimo, mas template genérico demais e sem contexto TechFix; fluxo alternativo não traz erro realístico."
+P005,G1,1 - TechFix,Sem o uso de LLM,"Título: Avaliação de Soluções Técnicas
 
 DESCRIÇÃO
 EU COMO: Usuário com problemas técnicos
@@ -73,8 +73,8 @@ DADO QUE: Votei em uma resposta anteriormente
 E percebi que a resposta não resolveu o problema completamente
 QUANDO: clico novamente no botão ""Votar como útil"" para desfazer o voto
 ENTÃO: a pontuação do especialista é reduzida
-E a posição da resposta no ranking do chamado é reavaliada",12,5,Desalinhamento ao conceito de Fluxo Alternativo.,
-P006,1 - TechFix,Com o uso de LLM,"Título: Relatar problema técnico na plataforma
+E a posição da resposta no ranking do chamado é reavaliada",12,5,Desalinhamento ao conceito de Fluxo Alternativo.,,89,"História completa, conecta votação ao sistema de pontuação e ranking; fluxos coerentes e úteis."
+P006,G2,1 - TechFix,Com o uso de LLM,"Título: Relatar problema técnico na plataforma
 
 DESCRIÇÃO
 EU COMO: Usuário com problema técnico
@@ -89,8 +89,8 @@ DADO QUE: o usuário está logado na plataforma
 E: acessa a área de chamados
 E: tenta preencher o formulário com informações incompletas ou inválidas
 QUANDO: ele clica no botão “enviar chamado”
-ENTÃO: o sistema exibe mensagens de erro indicando os campos obrigatórios não preenchidos e impede o envio até que o formulário seja corretamente preenchido",3,10,,
-P007,1 - TechFix,Com o uso de LLM,Cadastro de Chamado por Usuário com Problema Técnico,"Fluxo Principal – Cadastro de Chamado e Resposta de Especialista
+ENTÃO: o sistema exibe mensagens de erro indicando os campos obrigatórios não preenchidos e impede o envio até que o formulário seja corretamente preenchido",3,10,,,89,Estrutura clara e segue template; fluxos bem definidos; pouca criatividade.
+P007,G2,1 - TechFix,Com o uso de LLM,Cadastro de Chamado por Usuário com Problema Técnico,"Fluxo Principal – Cadastro de Chamado e Resposta de Especialista
 DADO QUE o usuário está logado na plataforma
 E possui um problema técnico específico
 E acessa a área de “Relatar Chamado”
@@ -103,8 +103,8 @@ E está navegando por chamados semelhantes ao seu
 QUANDO encontra uma solução útil em outro chamado
 ENTÃO pode votar positivamente na resposta do especialista
 E o especialista recebe pontos adicionais no ranking
-E o sistema recomenda essa solução para chamados semelhantes automaticamente",7,5,Há um desalinhamento entre fluno normal e fluxo alternativo.,
-P008,1 - TechFix,Com o uso de LLM,"TechFix – Plataforma de Suporte Técnico Colaborativo:
+E o sistema recomenda essa solução para chamados semelhantes automaticamente",7,5,Há um desalinhamento entre fluno normal e fluxo alternativo.,,87,Abrange notificações e ranking; faltou seção “DESCRIÇÃO” explícita no template.
+P008,G2,1 - TechFix,Com o uso de LLM,"TechFix – Plataforma de Suporte Técnico Colaborativo:
 
 DESCRIÇÃO
 EU COMO: Usuário comum da plataforma TechFix
@@ -127,8 +127,8 @@ QUANDO: clico no botão ""Enviar Chamado""
 ENTÃO: o sistema exibe uma mensagem de erro informando os campos obrigatórios
 E impede o envio do chamado até que todos os campos necessários sejam preenchidos
 
-",14,10,Vários exercícios tem esta mesma resposta (ou muito similar). Plágio ou algum viés da explicação?,
-P009,1 - TechFix,Sem o uso de LLM,"Título:
+",14,10,Vários exercícios tem esta mesma resposta (ou muito similar). Plágio ou algum viés da explicação?,,88,"Texto bem escrito e completa o template; solução genérica, sem diferencial."
+P009,G1,1 - TechFix,Sem o uso de LLM,"Título:
 Melhores respostas
 
 DESCRIÇÃO:
@@ -144,8 +144,8 @@ DADO QUE: Estou logado na plataforma
 E: Tento votar em uma resposta que eu mesmo escrevi
 QUANDO: Clico para votar na minha própria resposta
 ENTÃO: O sistema bloqueia a ação
-E: Exibe uma mensagem informando que não é permitido votar na própria resposta",21,10,,
-P010,1 - TechFix,Sem o uso de LLM,"História de Usuário: 
+E: Exibe uma mensagem informando que não é permitido votar na própria resposta",21,10,,,91,História de votação robusta; fluxo alternativo relevante; muito coerente.
+P010,G1,1 - TechFix,Sem o uso de LLM,"História de Usuário: 
 EU COMO: Usuário
 GOSTARIA DE: Relatar problemas técnicos
 PARA: Receber soluções para o meu problema, dadas pelos especialistas","Caso de Uso Principal:
@@ -160,8 +160,8 @@ DADO QUE: O usuário está logado no sistema
 E: O usuário está na tela de formulário 
 E: O usuário preencheu o campo do formulário com a mensagem desejada
 QUANDO: O usuário clicar no botão ""cancelar"" do formulário
-ENTÃO: O sistema voltará à tela inicial",13,10,,
-P011,1 - TechFix,Sem o uso de LLM,"Título da história de usuário: Votação em respostas úteis 
+ENTÃO: O sistema voltará à tela inicial",13,10,,,84,"Fluxo principal sólido; fluxo alternativo trivial (“cancelar”), pouco criativo."
+P011,G1,1 - TechFix,Sem o uso de LLM,"Título da história de usuário: Votação em respostas úteis 
 Descrição: EU COMO: Usuário da plataforma
 GOSTARIA DE: Votar em respostas úteis
 PARA: Ajudar outros usuários","DADO QUE: Estou logado
@@ -172,8 +172,8 @@ E: O especialista ganha pontos
 E: A resposta pode ser destacada","DADO QUE: Estou navegando sem login
 QUANDO: Tento votar como útil
 ENTÃO: Sou redirecionado para login
-E: Após login, volto à resposta e posso votar",17,10,,
-P012,1 - TechFix,Com o uso de LLM,"Título: Cadastro de Chamado Técnico pelo Usuário
+E: Após login, volto à resposta e posso votar",17,10,,,88,Fluxos claros e coerentes; segue template; criatividade moderada no alternativo.
+P012,G2,1 - TechFix,Com o uso de LLM,"Título: Cadastro de Chamado Técnico pelo Usuário
 
 DESCRIÇÃO
 EU COMO: Usuário da plataforma TechFix
@@ -191,8 +191,8 @@ E: acessa a seção de “Abrir Chamado”
 E: deixa de preencher um ou mais campos obrigatórios (como título ou descrição)
 QUANDO: tenta clicar no botão “Enviar Chamado”
 ENTÃO: o sistema exibe uma mensagem de erro indicando os campos obrigatórios ausentes
-E: impede o envio do chamado até que todas as informações necessárias sejam preenchidas",7,10,,
-P013,1 - TechFix,Com o uso de LLM,"DESCRIÇÃO
+E: impede o envio do chamado até que todas as informações necessárias sejam preenchidas",7,10,,,90,Estrutura completa; atende template e enunciado; falta diferencial extra.
+P013,G2,1 - TechFix,Com o uso de LLM,"DESCRIÇÃO
 
 EU COMO: Usuário comum com dificuldades técnicas
 GOSTARIA DE: Relatar um problema técnico na plataforma
@@ -212,8 +212,8 @@ E estou logado na plataforma
 QUANDO: Eu leio uma resposta útil e clico no botão de ""Votar como útil""
 ENTÃO: A resposta recebe um voto positivo
 E o especialista responsável ganha pontos no sistema de pontuação
-E a resposta é priorizada visualmente entre as demais",13,5,Desalilhamento do conceito de Fluxo Alternativo.,
-P014,1 - TechFix,Sem o uso de LLM,"Cadastro de problemas técnicos.
+E a resposta é priorizada visualmente entre as demais",13,5,Desalilhamento do conceito de Fluxo Alternativo.,,87,Bom preenchimento e integração de votação; poderia explicitar “DESCRIÇÃO”.
+P014,G1,1 - TechFix,Sem o uso de LLM,"Cadastro de problemas técnicos.
 EU COMO: Usuário do sistema.
 GOSTARIA DE: Relatar um problema técnico.
 PARA: Que técnicos, e especialistas possam sugerir soluções.","CASOS DE USO (Cadastro de chamados)
@@ -224,8 +224,8 @@ ENTÃO: Não consigo cadastrar um problema. ","CASOS DE USO (Notificações)
 DADO QUE: Estou dentro do sistema.
 E estou com problemas técnicos.
 QUANDO: Faço o cadastro do problema técnico e fico sem receber notificações de resposta.
-ENTÃO: Não consigo saber se alguém tirou minha dúvida.  ",18,5,Não entendeu o conceito de fluxo principal.,
-P015,1 - TechFix,Com o uso de LLM,"EU COMO: Usuário da plataforma TechFix
+ENTÃO: Não consigo saber se alguém tirou minha dúvida.  ",18,5,Não entendeu o conceito de fluxo principal.,,60,Fluxo principal inválido (impede em vez de registrar); muito genérico.
+P015,G2,1 - TechFix,Com o uso de LLM,"EU COMO: Usuário da plataforma TechFix
 GOSTARIA DE: Relatar um problema técnico detalhado
 PARA: Receber sugestões de solução de especialistas e resolver o problema rapidamente","Fluxo Principal – Cadastro de Chamado Técnico
 DADO QUE: Estou logado na plataforma
@@ -239,8 +239,8 @@ E: Estou na página de abertura de chamados
 E: Preencho apenas o título, deixando a descrição em branco
 QUANDO: Clico no botão ""Enviar Chamado""
 ENTÃO: O sistema exibe uma mensagem de erro informando que todos os campos obrigatórios devem ser preenchidos
-E: O chamado não é cadastrado até que todas as informações sejam completadas",7,10,Note que tem muitos fluxos alternativos semelhantes a este. Falta de criatividade ou plágio?,
-P016,1 - TechFix,Com o uso de LLM,"Título: Cadastro de Chamado Técnico por Usuário
+E: O chamado não é cadastrado até que todas as informações sejam completadas",7,10,Note que tem muitos fluxos alternativos semelhantes a este. Falta de criatividade ou plágio?,,89,Clara e completa; fluxo alternativo adequado; funcionalidade básica.
+P016,G2,1 - TechFix,Com o uso de LLM,"Título: Cadastro de Chamado Técnico por Usuário
 DESCRIÇÃO
 EU COMO: Usuário da plataforma TechFix
 GOSTARIA DE: Registrar um chamado técnico relatando meu problema
@@ -254,8 +254,8 @@ DADO QUE: o usuário está logado na plataforma TechFix
 E: acessa a seção de chamados
 E: tenta preencher o formulário de cadastro de chamado
 QUANDO: deixa campos obrigatórios em branco ou insere informações inválidas
-ENTÃO: o sistema exibe mensagens de erro e impede o envio até que o formulário esteja corretamente preenchido",6,10,òtimo!,
-P017,1 - TechFix,Sem o uso de LLM,"HISTÓRIA DE USUÁRIO
+ENTÃO: o sistema exibe mensagens de erro e impede o envio até que o formulário esteja corretamente preenchido",6,10,òtimo!,,90,"Segue completo o template, fluxos claros e bem detalhados; criatividade mediana (padrão)."
+P017,G1,1 - TechFix,Sem o uso de LLM,"HISTÓRIA DE USUÁRIO
 Cadastro de chamados
 EU COMO: usuário
 GOSTARIA DE: cadastrar meus chamados
@@ -269,8 +269,8 @@ ENTÃO: então ele será cadastrado e um especialista poderá sugerir uma soluç
 DADO QUE: eu não tenha credenciais válidas
 E eu insira elas no sistema
 QUANDO: eu apertar o botão de login
-ENTÃO: ocorrerá um erro e não conseguirei entrar no sistema.",16,10,,
-P018,1 - TechFix,Com o uso de LLM,"Registro de chamado técnico por usuário
+ENTÃO: ocorrerá um erro e não conseguirei entrar no sistema.",16,10,,,65,"Muito genérico, falta “DESCRIÇÃO” no template e fluxo alternativo não se relaciona ao enunciado"
+P018,G2,1 - TechFix,Com o uso de LLM,"Registro de chamado técnico por usuário
 EU COMO: Usuário 
 GOSTARIA DE: Registrar um chamado com a descrição do problema que estou enfrentando
 PARA: Receber sugestões de solução dos especialistas da comunidade TechFix","Fluxo Principal: Registro de chamado técnico
@@ -291,8 +291,8 @@ E tenta acessar a funcionalidade de abertura de chamados
 QUANDO: clica em “Registrar Chamado”
 
 ENTÃO: o sistema redireciona o usuário para a página de login
-E exibe uma mensagem informando que é necessário estar logado para registrar chamados",6,10,,
-P019,1 - TechFix,Sem o uso de LLM,"ACESSO AO SISTEMA
+E exibe uma mensagem informando que é necessário estar logado para registrar chamados",6,10,,,88,"Estrutura consistente, fluxos principal e alternativo adequados; pouca originalidade."
+P019,G1,1 - TechFix,Sem o uso de LLM,"ACESSO AO SISTEMA
 EU COMO: <Aluno> 
 GOSTARIA DE: <visualizar meu perfil>
 PARA: <alterar meu dados pessoais>","CASOS DE USO (Fluxo principal)
@@ -303,8 +303,8 @@ ENTÃO: <liste os dados pessoais do aluno> ","CASOS DE USO (Fluxo alternativo)
 DADO QUE: <aluno na página perfil de usuário>
 E <identificou um e-mail antigo>
 QUANDO: <aluno selecionar o botão ""editar"">
-ENTÃO: <abra os dados para o aluno realizar a alteração> ",15,5,Não usou adequadamente o template. Fugiu do tema TechFix,
-P001,2 - GreenMarket,Sem o uso de LLM,"Título: Assinar entregas semanais de produtos orgânicos
+ENTÃO: <abra os dados para o aluno realizar a alteração> ",15,5,Não usou adequadamente o template. Fugiu do tema TechFix,,50,"Fora do escopo TechFix, sem contexto de chamados ou especialistas; template genérico demais."
+P001,G2,2 - GreenMarket,Sem o uso de LLM,"Título: Assinar entregas semanais de produtos orgânicos
 
 DESCRIÇÃO
 EU COMO: Consumidor recorrente do GreenMarket.
@@ -324,8 +324,8 @@ E deseja pausar as entregas por um período
 QUANDO acessa a área de ""Minhas Assinaturas"" e escolhe a opção ""Pausar Entregas""
 ENTÃO a assinatura é temporariamente suspensa
 E o usuário pode definir a data de reativação automática ou optar por reativar manualmente depois
-E não são cobradas entregas durante o período pausado",8,5,Não entendeu corretamente o conceito de Fluxo Alternativo.,
-P002,2 - GreenMarket,Com o uso de LLM,"Título: Assinatura Semanal de Produtos Orgânicos
+E não são cobradas entregas durante o período pausado",8,5,Não entendeu corretamente o conceito de Fluxo Alternativo.,,85,"História bem escrita e fluxos completos; domínio diferente (GreenMarket), mas tecnicamente sólida."
+P002,G1,2 - GreenMarket,Com o uso de LLM,"Título: Assinatura Semanal de Produtos Orgânicos
 DESCRIÇÃO: Sistema de assinatura semanal para entrega de produtos orgânicos aos consumidores.
 EU COMO: Consumidor consciente que preza por produtos saudáveis e sustentáveis
 GOSTARIA DE: Assinar uma entrega recorrente de frutas e verduras orgânicas
@@ -345,8 +345,8 @@ E não há planos de assinatura disponíveis para sua região
 
 QUANDO: ele tenta selecionar um plano de assinatura
 
-ENTÃO: o sistema exibe a mensagem “Ainda não entregamos na sua região” e oferece a opção de notificação por e-mail futuramente",5,10,,
-P003,2 - GreenMarket,Com o uso de LLM,"Título: Assinatura Semanal de Produtos Orgânicos
+ENTÃO: o sistema exibe a mensagem “Ainda não entregamos na sua região” e oferece a opção de notificação por e-mail futuramente",5,10,,,90,"Escrita clara, segue completamente o template, fluxos principal e alternativo bem definidos; criatividade padrão."
+P003,G1,2 - GreenMarket,Com o uso de LLM,"Título: Assinatura Semanal de Produtos Orgânicos
 DESCRIÇÃO
 EU COMO: Consumidor do aplicativo GreenMarket
 GOSTARIA DE: Assinar uma entrega semanal de produtos orgânicos
@@ -363,8 +363,8 @@ E: Tenho um endereço de entrega cadastrado
 E: Meu método de pagamento está expirado ou inválido
 QUANDO: Eu tento finalizar a assinatura semanal
 ENTÃO: O sistema exibe uma mensagem de erro informando problema no pagamento
-E: Solicita que eu atualize meus dados de pagamento para concluir a assinatura",9,10,,
-P004,2 - GreenMarket,Com o uso de LLM,"TEMPLATE - HISTÓRICO DE PEDIDOS
+E: Solicita que eu atualize meus dados de pagamento para concluir a assinatura",9,10,,,90,"Estrutura robusta e cobre falha de pagamento; leve falta de título explícito, mas cumpre o enunciado."
+P004,G1,2 - GreenMarket,Com o uso de LLM,"TEMPLATE - HISTÓRICO DE PEDIDOS
 DESCRIÇÃO
 Permitir que o consumidor visualize os pedidos anteriores realizados no aplicativo, com detalhes como data da compra, itens adquiridos, valor total e status da entrega
 EU COMO: Consumidor do GreenMarket
@@ -377,8 +377,8 @@ ENTÃO: o sistema deve exibir uma lista de pedidos anteriores com data, valor e 
 DADO QUE: o usuário está logado no aplicativo
 E: nunca realizou um pedido
 QUANDO: ele acessar a seção ""Histórico de Pedidos""
-ENTÃO: o sistema deve exibir uma mensagem amigável como “Você ainda não realizou nenhum pedido. Explore nossos produtos e faça sua primeira compra!”",3,10,,
-P005,2 - GreenMarket,Com o uso de LLM,"DESCRIÇÃO
+ENTÃO: o sistema deve exibir uma mensagem amigável como “Você ainda não realizou nenhum pedido. Explore nossos produtos e faça sua primeira compra!”",3,10,,,89,"Preenche todo o template, fluxos coerentes; falta um toque de originalidade além do básico."
+P005,G1,2 - GreenMarket,Com o uso de LLM,"DESCRIÇÃO
 EU COMO: Consumidor interessado em produtos orgânicos
 GOSTARIA DE: Assinar um plano de entrega semanal de frutas e verduras
 PARA: Receber produtos frescos em casa com regularidade e apoiar pequenos produtores locais","DADO QUE: O usuário está logado no aplicativo
@@ -391,8 +391,8 @@ E possui um endereço cadastrado
 E não há planos de assinatura disponíveis para sua região
 QUANDO: O usuário tenta assinar um plano semanal
 ENTÃO: O sistema exibe uma mensagem informando que não há entregas disponíveis na região
-E oferece a opção de ser notificado quando houver disponibilidade",2,10,Note que o fluxo nolmal e alternativo é quase idêntico do da linha 22 (acima). Falta de criatividade ou págio?,
-P006,2 - GreenMarket,Sem o uso de LLM,"Titulo: Compra de produtos
+E oferece a opção de ser notificado quando houver disponibilidade",2,10,Note que o fluxo nolmal e alternativo é quase idêntico do da linha 22 (acima). Falta de criatividade ou págio?,,86,Boa aderência ao template e enunciado; faltou título e um pouco mais de distinção criativa entre fluxos.
+P006,G2,2 - GreenMarket,Sem o uso de LLM,"Titulo: Compra de produtos
 DESCRIÇÃO
 EU COMO: Comprador
 GOSTARIA DE: Comprar produtos no sistema
@@ -404,16 +404,16 @@ ENTÃO: eu quero poder acompanhar a entrega do produto","CASOS DE USO (Fluxo alt
 DADO QUE: Eu realizei uma compra 
 E … E … não estou logado,
 QUANDO: clico no botão de confirmar compra 
-ENTÃO: eu quero poder realizar a autenticação no sistema e acompanhar a entrega do produto",7,10,"Aplicou o conceito corretamente, apesar de pequedo erro de uso do template (E... E...)",
-P007,2 - GreenMarket,Sem o uso de LLM,Usuário consumidor analisa seu histórico de pedidos,"DESCRIÇÃO
+ENTÃO: eu quero poder realizar a autenticação no sistema e acompanhar a entrega do produto",7,10,"Aplicou o conceito corretamente, apesar de pequedo erro de uso do template (E... E...)",,66,"Escrita confusa, template mal aplicado, fluxos pouco realistas e repetitivos; precisa de revisão estrutural."
+P007,G2,2 - GreenMarket,Sem o uso de LLM,Usuário consumidor analisa seu histórico de pedidos,"DESCRIÇÃO
 EU COMO: Usuário consumidor
 GOSTARIA DE: Analisar meu histórico de pedidos
 PARA: Que eu possa ter controle dos meus gastos","DADO QUE: O usuário consumidor esteja logado
 E: Previamente tenha realizado alguma compra
 QUANDO: Acessar a aba de histórico de pedidos
 E: Definir um período de análise 
-ENTÃO: Terá acesso a todo o histórico com base no período",8,5,Não usou o template para descrição.,
-P008,2 - GreenMarket,Sem o uso de LLM,"Aplicativo de Compra de Agro produtos
+ENTÃO: Terá acesso a todo o histórico com base no período",8,5,Não usou o template para descrição.,,88,"Fluxos claros, atende template; título pouco descritivo, mas funcionalidade bem apresentada."
+P008,G2,2 - GreenMarket,Sem o uso de LLM,"Aplicativo de Compra de Agro produtos
 DESCRIÇÃO: Um aplicativo feito para os usuários acompanharem a origem dos produtos e oferece um sistema de assinatura para entregas semanais
 EU COMO: Consumidor
 GOSTARIA DE: Verificar quais vegetais estão em melhor preço
@@ -425,8 +425,8 @@ ENTÃO: terá um detalhamento sobre os produtos e preços dos mesmos.","CASOS DE
 DADO QUE: O usuário esta logado na plataforma
 E tentou realizar um pedido 
 QUANDO: clicar no botão de compra
-ENTÃO:  opção será dada como invalida e retornará ao menu",7,10,,
-P009,2 - GreenMarket,Com o uso de LLM,"Ativação de assinatura semanal de produtos orgânicos
+ENTÃO:  opção será dada como invalida e retornará ao menu",7,10,,,70,"Template mal formatado (título genérico), fluxo alternativo confuso e sem clareza."
+P009,G1,2 - GreenMarket,Com o uso de LLM,"Ativação de assinatura semanal de produtos orgânicos
 
 EU COMO: Consumidor interessado em produtos orgânicos
 GOSTARIA DE: Ativar uma assinatura semanal de entrega de produtos
@@ -438,8 +438,8 @@ QUANDO: ele seleciona a opção ""Ativar entrega semanal"" no momento do checkou
 ENTÃO: o sistema cria uma assinatura recorrente com entrega semanal, confirma a primeira entrega e envia uma notificação de confirmação ao usuário","DADO QUE: o usuário está logado no aplicativo
 E tenta ativar a assinatura semanal durante o checkout
 QUANDO: o sistema detecta que não há um endereço de entrega cadastrado
-ENTÃO: o sistema exibe uma mensagem solicitando o cadastro de um endereço válido antes de prosseguir com a assinatura",6,10,,
-P010,2 - GreenMarket,Com o uso de LLM,"Título da História de Usuário:
+ENTÃO: o sistema exibe uma mensagem solicitando o cadastro de um endereço válido antes de prosseguir com a assinatura",6,10,,,90,Completo e coerente; cobre bem principal e alternativo; poderia inovar no alternativo.
+P010,G1,2 - GreenMarket,Com o uso de LLM,"Título da História de Usuário:
 Assinar Entrega Semanal de Produtos Orgânicos
 
 DESCRIÇÃO
@@ -457,8 +457,8 @@ DADO QUE: Estou logado no aplicativo
 E: Ainda não cadastrei um endereço de entrega
 QUANDO: Tento confirmar a assinatura semanal na tela de pagamento
 ENTÃO: O sistema exibe um alerta solicitando o cadastro de endereço
-E: Redireciona para a tela de cadastro de endereço antes de finalizar a assinatura",2,10,,
-P011,2 - GreenMarket,Com o uso de LLM,"Título: Assinatura Semanal de Produtos Orgânicos
+E: Redireciona para a tela de cadastro de endereço antes de finalizar a assinatura",2,10,,,89,"Fluxos bem elaborados, segue template; falta mais distinção criativa entre os cenários."
+P011,G1,2 - GreenMarket,Com o uso de LLM,"Título: Assinatura Semanal de Produtos Orgânicos
 
 DESCRIÇÃO
 EU COMO: Consumidor do aplicativo GreenMarket
@@ -475,8 +475,8 @@ E: Ainda não cadastrei um endereço de entrega
 QUANDO: Clico em “Confirmar assinatura”
 ENTÃO: O sistema exibe um alerta solicitando o cadastro de endereço
 E: Sou redirecionado para preencher o endereço
-E: Após salvar, posso concluir a assinatura normalmente",3,10,,
-P012,2 - GreenMarket,Sem o uso de LLM,"EU COMO: Consumidor
+E: Após salvar, posso concluir a assinatura normalmente",3,10,,,87,"Estrutura correta, mas muito similar a P010; pouco diferencial e criatividade moderada."
+P012,G2,2 - GreenMarket,Sem o uso de LLM,"EU COMO: Consumidor
 GOSTARIA DE: realizar uma assinatura de produtos organicos
 PARA: receber produtos de qualidade em minha casa de forma simplificada","DADO QUE: o consumidor insere as credencias e loga no app
 E: acessa a aba de assinatura
@@ -486,8 +486,8 @@ ENTÃO: essa assinatura é registrada no sistema","DADO QUE: o consumidor insere
 E: acessa a aba de assinatura
 E: não insere todos os dados obrigatórios para a compra
 QUANDO: tenta confirmar a assinatura
-ENTÃO: é exibida uma mensagem de erro no sistema",11,10,,
-P013,2 - GreenMarket,Sem o uso de LLM,"DESCRIÇÃO
+ENTÃO: é exibida uma mensagem de erro no sistema",11,10,,,82,"Cumpre template e fluxos; texto claro, mas faltou título e “DESCRIÇÃO” explícita, e objetivo pouco detalhado."
+P013,G2,2 - GreenMarket,Sem o uso de LLM,"DESCRIÇÃO
 EU COMO: usuário
 GOSTARIA DE: ver o histórico dos meus pedidos
 PARA: ver informações sobre o que foi comprado, quanto foi gasta, de quem foi comprado, etc.","CASOS DE USO
@@ -498,8 +498,8 @@ DADO QUE: eu esteja logado no aplicativo
 E: na tela de histórico do aplicativo
 QUANDO: eu clicar no botão de datas
 E: definir um intervalo de tempo no calendário
-ENTÃO: o sistema irá filtrar o conteúdo mostrado na tabela",9,5,Não entendeu corretamente o conceito de fluxo alternativo.,
-P014,2 - GreenMarket,Com o uso de LLM,"Título: Geolocalização e Interação com Produtores Orgânicos
+ENTÃO: o sistema irá filtrar o conteúdo mostrado na tabela",9,5,Não entendeu corretamente o conceito de fluxo alternativo.,,88,Fluxos bem definidos; cobre filtro de período; título poderia ser mais descritivo e seguir template.
+P014,G1,2 - GreenMarket,Com o uso de LLM,"Título: Geolocalização e Interação com Produtores Orgânicos
 
 DESCRIÇÃO:
 EU COMO: Consumidor consciente e engajado na alimentação saudável
@@ -515,8 +515,8 @@ ENTÃO: o sistema exibe os produtores orgânicos mais próximos, com detalhes so
 DADO QUE: o usuário está logado no aplicativo
 E não há produtores cadastrados próximos à localização informada
 QUANDO: o usuário tenta acessar o mapa de produtores
-ENTÃO: o sistema exibe uma mensagem informando que não há produtores disponíveis na região, oferece a opção de expandir o raio de busca e sugere que o usuário ative notificações para ser avisado quando novos produtores forem cadastrados na área",3,10,,
-P015,2 - GreenMarket,Sem o uso de LLM,"EU COMO: Consumidor de produtos orgânicos
+ENTÃO: o sistema exibe uma mensagem informando que não há produtores disponíveis na região, oferece a opção de expandir o raio de busca e sugere que o usuário ative notificações para ser avisado quando novos produtores forem cadastrados na área",3,10,,,92,"História criativa, fluxos robustos e bem contextualizados; atende todas as seções do template."
+P015,G2,2 - GreenMarket,Sem o uso de LLM,"EU COMO: Consumidor de produtos orgânicos
 GOSTARIA DE: comprar uma assinatura para entrega semanal
 PARA: receber produtos de qualidade toda semana","Contratação de assinatura para usuário sem assinatura ativa
 DADO QUE: Eu esteja logado no aplicativo
@@ -527,8 +527,8 @@ DADO QUE: Eu esteja logado no aplicativo
 E clique em contratar assinatura
 QUANDO: eu for direcionado para a página de inserção de dados
 ENTÃO: serei informado que já possuo uma assinatura ativa
-E o sistema não registrará uma nova assinatura",7,10,,
-P016,2 - GreenMarket,Sem o uso de LLM,"DESCRIÇÃO Fazer uma nova assinatura de recebimento de entregas semanais.
+E o sistema não registrará uma nova assinatura",7,10,,,80,"Essencial, mas genérico; fluxos adequados; faltou formatação de “DESCRIÇÃO” e mais detalhes no alternativo."
+P016,G2,2 - GreenMarket,Sem o uso de LLM,"DESCRIÇÃO Fazer uma nova assinatura de recebimento de entregas semanais.
 EU COMO: Consumidor
 GOSTARIA DE: Fazer uma assinatura de entrega semanais
 PARA: Facilitar a compra de verduras e frutas rotineiramente ","CASOS DE USO Fluxo principal 
@@ -539,8 +539,8 @@ ENTÃO: realiza cadastro de nova assinatura para o consumidor","CASOS DE USO Alt
 DADO QUE: o usuário está logado
 E … E … acessa a aba de nova assinatura
 QUANDO: aperta sim para nova assinatura, e não existem entregadores disponíveis para a localidade
-ENTÃO: informa que no momento não existem entregadores disponíveis na localidade selecionada, e pergunta se deseja alterar a localidade",10,10,"Conceito correto, apesar de problema no template (E... E...)",
-P017,2 - GreenMarket,Com o uso de LLM,"Título: Assinar entrega semanal de produtos orgânicos
+ENTÃO: informa que no momento não existem entregadores disponíveis na localidade selecionada, e pergunta se deseja alterar a localidade",10,10,"Conceito correto, apesar de problema no template (E... E...)",,85,Fluxos claros e alternativo relevante; “DESCRIÇÃO” mal formatada e repetição de template sem título.
+P017,G1,2 - GreenMarket,Com o uso de LLM,"Título: Assinar entrega semanal de produtos orgânicos
 DESCRIÇÃO
 EU COMO: Consumidor consciente que busca alimentos saudáveis e sustentáveis
 GOSTARIA DE: Assinar uma entrega semanal de produtos orgânicos de produtores locais
@@ -554,8 +554,8 @@ DADO QUE: Estou logado no aplicativo
 E: Tenho um endereço de entrega cadastrado
 E: Não possuo uma forma de pagamento válida registrada
 QUANDO: Tento confirmar a assinatura semanal de produtos
-ENTÃO: O sistema exibe uma mensagem de erro solicitando o cadastro de uma forma de pagamento válida e impede a finalização da assinatura até que o requisito seja cumprido",6,10,,
-P018,2 - GreenMarket,Sem o uso de LLM,"Título: Avaliação de produtos
+ENTÃO: O sistema exibe uma mensagem de erro solicitando o cadastro de uma forma de pagamento válida e impede a finalização da assinatura até que o requisito seja cumprido",6,10,,,92,"História completa, segue template e fluxos claros; alternativo relevante; poderia ter um toque mais criativo."
+P018,G2,2 - GreenMarket,Sem o uso de LLM,"Título: Avaliação de produtos
 
 DESCRIÇÃO
 EU COMO: Cliente
@@ -568,8 +568,8 @@ ENTÃO: A avaliação fica disponível na plataforma para os demais usuários","
 DADO QUE: O cliente não comprou um produto
 E tenta avaliar o produto
 QUANDO: A avaliação for enviada
-ENTÃO: Vai aparecer uma mensagem de erro falando que ele não comprou o produto para poder avaliar",7,10,,
-P019,2 - GreenMarket,Com o uso de LLM,"Título: Assinatura semanal de produtos orgânicos
+ENTÃO: Vai aparecer uma mensagem de erro falando que ele não comprou o produto para poder avaliar",7,10,,,84,"Bom template e fluxos, mas texto genérico; alternativo correto porém óbvio; falta distinção e título mais forte."
+P019,G1,2 - GreenMarket,Com o uso de LLM,"Título: Assinatura semanal de produtos orgânicos
 
 DESCRIÇÃO
 EU COMO: Consumidor interessado em alimentação saudável
@@ -587,8 +587,8 @@ DADO QUE: Tenho uma assinatura semanal ativa
 E recebi uma notificação sobre a próxima entrega
 QUANDO: acesso a assinatura e modifico os itens antes da data limite
 ENTÃO: o sistema atualiza os produtos que serão enviados naquela semana
-E confirma a alteração via e-mail e notificação no app",6,5,Não entendeu corretamente o conceito de fluxo alternativo.,
-P025,1 - TechFix,Com o uso de LLM,"Titulo: Usuário com problemas técnicos, que serão cadastrados em um chamado
+E confirma a alteração via e-mail e notificação no app",6,5,Não entendeu corretamente o conceito de fluxo alternativo.,,89,Fluxos bem elaborados e coerentes; atende enunciado; alternativo útil; criatividade moderada.
+P025,G2,1 - TechFix,Com o uso de LLM,"Titulo: Usuário com problemas técnicos, que serão cadastrados em um chamado
 
 DESCRIÇÃO:
 EU COMO: Usuário com problema técnico
@@ -604,8 +604,8 @@ E: Acesso a página de criação de chamado
 E: Deixo de preencher algum campo obrigatório
 QUANDO: Clico em ""Enviar Chamado""
 ENTÃO: O sistema exibe uma mensagem de erro indicando os campos que precisam ser preenchidos
-E: O chamado não é enviado até que todas as informações obrigatórias sejam completadas",5,10,,
-P027,1 - TechFix,Sem o uso de LLM,"DESCRIÇÃO
+E: O chamado não é enviado até que todas as informações obrigatórias sejam completadas",5,10,,,90,"Estrutura clara e bem alinhada com a proposta da plataforma; fluxos realistas e úteis, cobrindo notificações e validações."
+P027,G1,1 - TechFix,Sem o uso de LLM,"DESCRIÇÃO
 EU COMO: Usuário 
 GOSTARIA DE: Avaliar respostas
 PARA: classificar aquela resposta como a melhor","CASOS DE USO (Fluxo principal)
@@ -616,8 +616,8 @@ ENTÃO: a resposta recebera a minha avaliação positiva","CASOS DE USO (Fluxo A
 DADO QUE: Sou um usuário não autenticado
 E quero avaliar uma resposta
 QUANDO: clicar em 'like'
-ENTÃO: o sistema exibe uma mensagem 'faça o login para efetuar a avaliação'  ",8,5,Deixou de explicitar no fluxo principal que o usuário deve estar autenticado para estar de acordo com o fluxo alternativo.,
-P023,1 - TechFix,Com o uso de LLM,"TechFix – Plataforma de Suporte Técnico Colaborativo: Uma startup lança um sistema onde usuários podem relatar problemas técnicos, e especialistas podem sugerir soluções. O sistema permite que os usuários votem nas melhores respostas, e os especialistas ganham pontos conforme suas soluções são bem avaliadas.","EU COMO: Especialista cadastrado na plataforma
+ENTÃO: o sistema exibe uma mensagem 'faça o login para efetuar a avaliação'  ",8,5,Deixou de explicitar no fluxo principal que o usuário deve estar autenticado para estar de acordo com o fluxo alternativo.,,80.5,"Caso de uso direto e funcional, mas linguagem informal; fluxo alternativo útil, porém falta detalhamento técnico."
+P023,G2,1 - TechFix,Com o uso de LLM,"TechFix – Plataforma de Suporte Técnico Colaborativo: Uma startup lança um sistema onde usuários podem relatar problemas técnicos, e especialistas podem sugerir soluções. O sistema permite que os usuários votem nas melhores respostas, e os especialistas ganham pontos conforme suas soluções são bem avaliadas.","EU COMO: Especialista cadastrado na plataforma
 GOSTARIA DE: Sugerir soluções para problemas relatados por usuários
 PARA: Compartilhar conhecimento técnico e ajudar a resolver chamados","FLUXO PRINCIPAL 
 DADO QUE: Estou cadastrado como especialista na plataforma
@@ -635,8 +635,8 @@ E: Um usuário abriu um chamado descrevendo um problema técnico
 E: Eu sugeri uma solução para o problema
 QUANDO: Minha resposta recebe avaliações negativas dos usuários
 ENTÃO: Não recebo pontos no sistema de pontuação
-E: Sou notificado com um feedback indicando que minha resposta foi mal avaliada",8,0,Não colocou as informações nos campos adequados.,
-P021,1 - TechFix,Sem o uso de LLM,"TÍTULO: Sistema de pontuações 
+E: Sou notificado com um feedback indicando que minha resposta foi mal avaliada",8,0,Não colocou as informações nos campos adequados.,,92,"Muito completo e inovador, com sistema de ranking e gamificação; cobre bem avaliação positiva e negativa."
+P021,G1,1 - TechFix,Sem o uso de LLM,"TÍTULO: Sistema de pontuações 
 DESCRIÇÃO: O usuário pontua as respostas fornecidas pelos especialistas
 EU COMO: Usuário autenticado no sistema
 GOSTARIA DE: Ver as soluções fornecidas pelos especialistas
@@ -648,8 +648,8 @@ E pontuo as soluções dos especialistas","DADO QUE: Eu não estou autenticado n
 E Não possuo um login 
 QUANDO: Tento visualizar as soluções fornecidas pelos especialistas
 ENTÃO: O sistema não permite 
-E me redireciona para a tela de cadastro",9,10,,
-P024,1 - TechFix,Sem o uso de LLM,"TITULO: Cadastro de Chamadas
+E me redireciona para a tela de cadastro",9,10,,,78,"Compreende a ideia de pontuar respostas, mas o fluxo principal é superficial e redundante. Alternativo razoável."
+P024,G1,1 - TechFix,Sem o uso de LLM,"TITULO: Cadastro de Chamadas
 DESCRIÇÃO
 EU COMO: Usuário do Sistema.
 GOSTARIA DE: Relatar um problema técnico.
@@ -661,8 +661,8 @@ ENTÃO: Recebo mensagem de confirmação","CASOS DE USO: Usuário não autentica
 DADO QUE: Não estou logado no Sistema como usuário.
 E Descrevi meu problema técnico
 QUANDO: Enviar o relato.
-ENTÃO: Recebo uma mensagem para criar uma conta.",11,10,,
-P026,1 - TechFix,Com o uso de LLM,"Título: Abertura de Chamado Técnico por Usuário Comum
+ENTÃO: Recebo uma mensagem para criar uma conta.",11,10,,,72.5,"Histórias básicas, pouco detalhadas; estrutura correta, mas sem diferencial. Falta inovação e impacto."
+P026,G2,1 - TechFix,Com o uso de LLM,"Título: Abertura de Chamado Técnico por Usuário Comum
 
 DESCRIÇÃO
 EU COMO: Usuária com dificuldade técnica no computador
@@ -677,8 +677,8 @@ E o chamado fica visível na minha conta para acompanhamento","DADO QUE: estou l
 E tentei enviar um chamado sem preencher todos os campos obrigatórios
 QUANDO: clico no botão “Enviar Chamado”
 ENTÃO: o sistema exibe uma mensagem de erro
-E destaca os campos que precisam ser corrigidos antes de permitir o envio",14,10,,
-P020,1 - TechFix,Sem o uso de LLM,"DESCRIÇÃO: Cadastro de chamados, para análise dos especialistas, feitas pelos usuários do sistema
+E destaca os campos que precisam ser corrigidos antes de permitir o envio",14,10,,,89,"Estrutura bem definida, fluxos realistas com destaque para validação de campos. Conecta bem com o propósito da plataforma."
+P020,G1,1 - TechFix,Sem o uso de LLM,"DESCRIÇÃO: Cadastro de chamados, para análise dos especialistas, feitas pelos usuários do sistema
 EU COMO: Usuário do sistema
 GOSTARIA DE: Verificar se meu problema já foi relatado e respondido anteriormente
 E se não for o caso, registrar uma chamada para informar sobre um problema técnico que possuo
@@ -695,8 +695,8 @@ E possuo um problema técnico
 QUANDO: Eu verifico no sistema a existência de um relato parecido registrado anteriormente
 E não encontro nenhum
 ENTÃO: Eu registro um chamado, informando as especificações do problema
-E o sistema deve disponibilizar esse chamado para que os especialistas possam analisar e responder",14,10,,
-P022,1 - TechFix,Sem o uso de LLM,"DESCRIÇÃO
+E o sistema deve disponibilizar esse chamado para que os especialistas possam analisar e responder",14,10,,,86,"Boa ideia de reaproveitamento de soluções. Fluxos bem montados, com leve repetição de contexto entre eles."
+P022,G1,1 - TechFix,Sem o uso de LLM,"DESCRIÇÃO
 EU COMO: <Especialista> 
 GOSTARIA DE: <sugerir uma solução para o problema de algum usuário>
 PARA: <ganhar pontos>
@@ -714,8 +714,8 @@ E: quero relatar um problema técnico
 QUANDO: entro no sistema
 E: percebo que não estou cadastrado
 ENTÃO: faço meu cadastro para relatar meu problema
-",15,5,O fluxo alternativo não corresponde ao fluxo principal.,
-P028,1 - TechFix,Com o uso de LLM,"Relato de Problema Técnico e Resolução Colaborativa
+",15,5,O fluxo alternativo não corresponde ao fluxo principal.,,68,"Estrutura genérica, alternativo confuso (mistura dois papéis). Falta clareza na distinção de usuários."
+P028,G2,1 - TechFix,Com o uso de LLM,"Relato de Problema Técnico e Resolução Colaborativa
 
 DESCRIÇÃO
 EU COMO: Usuário da plataforma TechFix
@@ -730,8 +730,8 @@ ENTÃO: O chamado é cadastrado, especialistas são notificados, e o usuário po
 DADO QUE: O usuário relata um problema técnico, mas esquece de incluir informações essenciais para o diagnóstico.
 E ... O sistema detecta a falta de informações e solicita um complemento ao usuário.
 QUANDO: O usuário adiciona os detalhes faltantes.
-ENTÃO: O chamado é reavaliado, cadastrado corretamente, e os especialistas são notificados para iniciar a análise.",17,10,,
-P024,2 - GreenMarket,Com o uso de LLM,"Título: Realizar Compra de Produtos Orgânicos
+ENTÃO: O chamado é reavaliado, cadastrado corretamente, e os especialistas são notificados para iniciar a análise.",17,10,,,90.5,"Fluxos bem descritos, com cuidado em detalhes como logs, imagens e reavaliação. Traz inovação e boa experiência de usuário."
+P024,G1,2 - GreenMarket,Com o uso de LLM,"Título: Realizar Compra de Produtos Orgânicos
 DESCRIÇÃO
 EU COMO: Consumidor do GreenMarket
 GOSTARIA DE: Comprar produtos orgânicos diretamente de pequenos produtores
@@ -747,8 +747,8 @@ E: Existem produtos orgânicos cadastrados na plataforma
 E: O consumidor selecionou os produtos desejados para compra
 QUANDO: O consumidor optar pelo sistema de assinatura para entregas semanais
 ENTÃO: O pedido será registrado no sistema como recorrente
-E: O consumidor receberá a confirmação da assinatura e a data da primeira entrega",2,10,,
-P027,2 - GreenMarket,Com o uso de LLM,"DESCRIÇÃO
+E: O consumidor receberá a confirmação da assinatura e a data da primeira entrega",2,10,,,91,"Caso claro e funcional; fluxo alternativo (assinatura) bem aproveitado como variação, e não como erro. Muito coerente."
+P027,G1,2 - GreenMarket,Com o uso de LLM,"DESCRIÇÃO
 EU COMO: Consumidor consciente que valoriza alimentos orgânicos e de origem conhecida
 GOSTARIA DE: Assinar uma entrega semanal de produtos orgânicos de produtores locais
 PARA: Garantir alimentos frescos, saudáveis e apoiar pequenos agricultores da minha região","CASOS DE USO(Fluxo Principal)
@@ -764,8 +764,8 @@ E: Tenho meu endereço cadastrado
 E: Não tenho um método de pagamento cadastrado
 QUANDO: Eu seleciono uma cesta orgânica e clico em “Assinar entrega semanal”
 ENTÃO: O sistema exibe uma mensagem solicitando o cadastro de um método de pagamento
-E: Redireciona para a tela de “Formas de Pagamento”",2,10,,
-P020,2 - GreenMarket,Com o uso de LLM,"DESCRIÇÃO: Avaliação de Produtos por Consumidores após a Entrega
+E: Redireciona para a tela de “Formas de Pagamento”",2,10,,,89.5,"Estrutura sólida e bem escrita; cenários bem pensados e aplicáveis, com diferencial no fluxo alternativo."
+P020,G1,2 - GreenMarket,Com o uso de LLM,"DESCRIÇÃO: Avaliação de Produtos por Consumidores após a Entrega
 EU COMO: Consumidor que utiliza o GreenMarket
 GOSTARIA DE: Avaliar os produtos que recebo após cada entrega
 PARA: Ajudar outros consumidores com minhas opiniões e contribuir para a reputação dos produtores","CASO DE USO (Fluxo Principal)
@@ -780,8 +780,8 @@ E: Está logado no aplicativo
 E: A entrega consta como finalizada no histórico de pedidos
 QUANDO: O consumidor tenta avaliar um produto, mas ainda não se passaram 24 horas desde a entrega
 ENTÃO: O sistema exibe uma mensagem informando que a avaliação estará disponível após esse período
-E: A opção de avaliação permanece desabilitada até que o tempo mínimo seja cumprido",3,10,,
-P022,2 - GreenMarket,Com o uso de LLM,"Assinar Entregas Semanais de Produtos Orgânicos
+E: A opção de avaliação permanece desabilitada até que o tempo mínimo seja cumprido",3,10,,,87.5,"Fluxos bem definidos, com tratamento de exceções realistas; texto claro, apenas ligeiramente conservador."
+P022,G1,2 - GreenMarket,Com o uso de LLM,"Assinar Entregas Semanais de Produtos Orgânicos
 EU COMO: consumidor preocupado com alimentação saudável
 GOSTARIA DE: assinar um plano de entregas semanais de produtos orgânicos
 PARA: receber em casa alimentos frescos diretamente de produtores confiáveis sem precisar fazer pedidos manuais toda semana","DADO QUE: o usuário está autenticado no aplicativo
@@ -792,8 +792,8 @@ ENTÃO: o sistema ativa a assinatura, agenda a primeira entrega e exibe a confir
 E: acessa a área de ""Assinaturas""
 E: tenta selecionar um plano
 QUANDO: o sistema verifica que não há produtores com entrega disponível para sua região
-ENTÃO: o sistema exibe uma mensagem informando a indisponibilidade de entrega e sugere que o usuário ative uma notificação para ser avisado quando houver disponibilidade",3,10,,
-P021,2 - GreenMarket,Com o uso de LLM,"TÍTULO: Visualizar a origem e os detalhes dos produtos orgânicos
+ENTÃO: o sistema exibe uma mensagem informando a indisponibilidade de entrega e sugere que o usuário ative uma notificação para ser avisado quando houver disponibilidade",3,10,,,88,"Bem adaptado ao contexto de assinatura; alternativo bem formulado, com resposta proativa do sistema."
+P021,G1,2 - GreenMarket,Com o uso de LLM,"TÍTULO: Visualizar a origem e os detalhes dos produtos orgânicos
 DESCRIÇÃO
 EU COMO: Consumidor preocupado com a procedência dos alimentos
 GOSTARIA DE: Visualizar a origem e informações detalhadas sobre os produtos orgânicos que estou comprando
@@ -808,8 +808,8 @@ E: Acessei a lista de produtos disponíveis para compra
 E: Selecionei um item da lista
 QUANDO: Eu clico na opção ""Ver origem e detalhes"" do produto
 ENTÃO: O aplicativo exibe uma mensagem informando que as informações detalhadas ainda não foram disponibilizadas pelo produtor
-E: Oferece a opção de enviar uma mensagem ao produtor pelo chat integrado para solicitar as informações",3,10,,
-P023,2 - GreenMarket,Sem o uso de LLM,"DESCRIÇÃO
+E: Oferece a opção de enviar uma mensagem ao produtor pelo chat integrado para solicitar as informações",3,10,,,90,"Excelente exemplo de transparência na cadeia de produção. Alternativo bem pensado, com solução comunicativa."
+P023,G2,2 - GreenMarket,Sem o uso de LLM,"DESCRIÇÃO
 EU COMO: usuário
 GOSTARIA DE: acompanhar a origem dos produtos e ter acesso a sistema de assinatura
 PARA: ter acesso a produtos a produtos orgânicos semanalmente
@@ -821,8 +821,8 @@ ENTÃO: o sistema me mostra os produtores presentes na minha região","CASOS DE 
 DADO QUE: gostaria de ver os produtores da minha região
 E … E … digito a localização/endereço desejado
 QUANDO: eu clico na opção buscar
-ENTÃO: o sistema me mostra produtores de uma localidade diferente da informada",8,0,O fluxo principal e alternativo estão iguais.,
-P025,2 - GreenMarket,Sem o uso de LLM,"Título: 
+ENTÃO: o sistema me mostra produtores de uma localidade diferente da informada",8,0,O fluxo principal e alternativo estão iguais.,,77.5,"Ideia interessante, mas fluxo alternativo parece duplicação mal formulada do principal; confusão na execução."
+P025,G2,2 - GreenMarket,Sem o uso de LLM,"Título: 
 
 DESCRIÇÃO
 EU COMO: Consumidor assíduo do GreenMarket
@@ -841,8 +841,8 @@ E aparece na tela a opção de visualizar meu histórico de pedidos
 E clico na opção citada 
 QUANDO: aparece-me uma lista, contendo todos os produtos, e na parte superior dessa lista, tem uma barra de pesquisa
 ENTÃO: clico na barra, e digito pelo produto
-E aparece uma mensagem de produto não encontrado, com legenda, sugerindo-me procurar pelo produto sem ser no histórico",12,5,"No fluxo alternativo, poderia trocar por ""E: clico na barra ..."" e ""ENTÃO: aparece uma mensagem...""",
-P026,2 - GreenMarket,Sem o uso de LLM,"HISÓRIA DO USUÁRIO: Avaliação de produtos adquiridos
+E aparece uma mensagem de produto não encontrado, com legenda, sugerindo-me procurar pelo produto sem ser no histórico",12,5,"No fluxo alternativo, poderia trocar por ""E: clico na barra ..."" e ""ENTÃO: aparece uma mensagem...""",,85,"Estrutura clara e caso de uso completo; narrativa bem aplicada ao sistema, com leve falta de detalhamento."
+P026,G2,2 - GreenMarket,Sem o uso de LLM,"HISÓRIA DO USUÁRIO: Avaliação de produtos adquiridos
 
 EU COMO pessoa preocupada com a consumo de alimentos orgânicos e de origem e produção certificados
 EU QUERO avaliar os produtos que adquiri na plataforma
@@ -861,8 +861,8 @@ DADO que o usuário possui perfil cadastrado no sistema
 E o usuário não adquiriu um determinado alimento do produtor
 E o usuário está logado no sistema
 QUANDO o usuário acessa a página do produto
-ENTÃO o sistema não exibe a caixa de avaliação do produto",15,10,,
-P028,2 - GreenMarket,Sem o uso de LLM,"Título : Consumo de produtos orgânicos diretamente de pequenos produtores
+ENTÃO o sistema não exibe a caixa de avaliação do produto",15,10,,,88.5,"Fluxos bem construídos e coerentes com a avaliação. Cenários úteis e detalhados, especialmente no alternativo."
+P028,G2,2 - GreenMarket,Sem o uso de LLM,"Título : Consumo de produtos orgânicos diretamente de pequenos produtores
 
 Descrição :
 EU COMO : Um consumidor de verduras e legumes e outros produtos orgânicos
@@ -877,4 +877,4 @@ ENTÃO: Eu realizo meu pedido e os produtos que eu tiver selecionado chegarem no
 
 DADO QUE : Eu selecionei um produto bem avaliado E esse produto chegou em minha casa E esse produto não confere com a qualidade assegurada e proposta pelo aplicativo.
 QUANDO : Eu receber esse produto do entregador junto à um código de confirmação E eu não quiser esse produto , eu posso acessar o histórico de pedidos .
-ENTÃO: Realizo uma avaliação quando o pedido for entregue OU solicitar a devolução do produto e ressarcimento do dinheiro pago. Confirmando uma experiência negativa e avaliando o Produtor .",18,10,,
+ENTÃO: Realizo uma avaliação quando o pedido for entregue OU solicitar a devolução do produto e ressarcimento do dinheiro pago. Confirmando uma experiência negativa e avaliando o Produtor .",18,10,,,84.5,"Boa ideia, mas texto confuso e redundante; estrutura de fluxo precisa de refinamento, apesar da intenção positiva."

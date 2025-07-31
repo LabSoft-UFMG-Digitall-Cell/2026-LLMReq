@@ -24,7 +24,7 @@ if __name__ == "__main__":
         boxplotLLM('time')
     elif graph == "4":
         print(f"Generating Boxplot for LLM usage by grade...")
-        boxplotLLM('grad_phd')
+        boxplotLLM('grad_mean')
     elif graph == "5":
         topic = 'requirements'
         print(f"Generating Specific Knowledge by Time graph for topic: {topic}...")

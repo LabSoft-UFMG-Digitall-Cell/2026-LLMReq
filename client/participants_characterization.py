@@ -140,9 +140,10 @@ def specific_knowledge_by_time(topic = 'requirements'):
 
     # Step 3: Rename the column of interest to a common name 'A' if needed
     # You may skip this if column is already 'A'
+    # Step 1: Rename the column
     df = df.rename(columns={topic: 'A'})
 
-    # Step 4: Map string values to categories
+    # Step 2: Map numeric values to categorical strings
     mapping = {
         '1': 'Low',
         '2': 'Low',
@@ -152,16 +153,16 @@ def specific_knowledge_by_time(topic = 'requirements'):
     }
     df['A'] = df['A'].astype(str).replace(mapping)
 
-    # ✅ Now df['A'] contains the labels Low / Medium / High
-    # print(df[['code', 'A']].head())
+    # ✅ Step 3: Define the categorical order
+    category_order = ['Low', 'Medium', 'High']
+    df['A'] = pd.Categorical(df['A'], categories=category_order, ordered=True)
 
-    
-    #Plot boxplot
+    # Step 4: Plot the boxplot
     plt.figure(figsize=(8, 6))
     df.boxplot('time', by='A', grid=False)
-    plt.title(f'Knowledge Level Impact on Response Time')
-    plt.suptitle('')  # Remove the default title
-    plt.xlabel(f'Knowledge Level on {topic} ')
+    plt.title('Knowledge Level Impact on Response Time')
+    plt.suptitle('')  # Remove default automatic title
+    plt.xlabel(f'Knowledge Level on {topic}')
     plt.ylabel('Time (minutes)')
     plt.tight_layout()
     plt.savefig(f"./figs/{topic}_knowledge_time.png")

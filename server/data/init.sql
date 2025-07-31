@@ -44,9 +44,11 @@ CREATE TABLE tasks (
     main_flow TEXT,
     alt_flow TEXT,
     time INT,
-    grad_phd INT,
+    grad_phd_01 INT,
     note01 TEXT,
+    grad_phd_02 INT,
     note02 TEXT,
+    grad_mean FLOAT,
     grad_llm FLOAT,
     note_llm TEXT
 );
