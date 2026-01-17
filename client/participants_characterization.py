@@ -56,14 +56,22 @@ def knowledge_distribuition():
     # Define os rótulos do eixo y
     english_labels = ['OOP', 'Software Arch.', 'Web Tech.', 'Database Sys.',
                     'Project Mgmt.', 'Req. Eng.', 'Agile Methods', 'Use of LLMs']
-    ax.set_ylabel('Knowledge Areas')
-    ax.set_xlabel('Number of Participants')
-    ax.set_title('Number of Participants by Knowledge Level per Area')
-    ax.set_yticks(index)
-    ax.set_yticklabels(english_labels)
+    ax.set_ylabel('Knowledge Areas', fontsize=18) # tamanho
+    ax.set_xlabel('Number of Participants', fontsize=18) # tamanho
+    ax.tick_params(axis='x', labelsize=14)  # tamanho
+    ax.set_title('Number of Participants by Knowledge Level per Area', fontsize=20) # tamanho
+    ax.set_yticks(index) # tamanho
+    ax.set_yticklabels(english_labels, fontsize=16) # tamanho
 
     # Posiciona a legenda fora do gráfico, à direita
-    ax.legend(title='Knowledge Level', bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
+    ax.legend(
+        title='Knowledge Level',
+        fontsize=16,          # tamanho do texto da legenda
+        title_fontsize=18,    # tamanho do título da legenda
+        bbox_to_anchor=(1.02, 1),
+        loc='upper left',
+        borderaxespad=0.
+    )
 
     plt.tight_layout()
     plt.savefig("./figs/KnowledgParticipants.png")
