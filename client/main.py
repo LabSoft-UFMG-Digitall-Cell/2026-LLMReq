@@ -1,4 +1,4 @@
-from participants_characterization import knowledge_distribuition, experience, specific_knowledge_by_time
+from participants import knowledge_distribuition, experience, specific_knowledge_by_time
 from results import boxplotLLM, positive_usage_llm
 
 if __name__ == "__main__":

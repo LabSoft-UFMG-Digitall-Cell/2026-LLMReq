@@ -20,24 +20,18 @@ def knowledge_distribuition():
         'Use of LLMs': [entry['llm_usage'] for entry in participants]
     }
 
-    # Cria o DataFrame
     df = pd.DataFrame(data)
-
-    # Seleciona as colunas de conhecimento
     knowledge_areas = df[['Object-Oriented Programming', 'Software Architecture', 'Web Tecnologies',
                         'Database Systems', 'Project Management', 'Requirements Engineering',
                         'Agile Methods', 'Use of LLMs']]
 
-    # Define os níveis de conhecimento
     knowledge_levels = sorted(df[knowledge_areas.columns].stack().unique())
 
-    # Prepara os dados para o gráfico de barras horizontais acumuladas
     bar_height = 0.6
     index = range(len(knowledge_areas.columns))
     colors = ["#ffffff", "#dadada", "#8d8d8d", "#494949", "#030303"]  # Cores para cada nível
 
     fig, ax = plt.subplots(figsize=(10, 6))
-
     left = [0] * len(knowledge_areas.columns)
 
     for i, level in enumerate(knowledge_levels):
@@ -49,32 +43,30 @@ def knowledge_distribuition():
             left=left,
             label=f'Level {level}',
             color=colors[i],
-            edgecolor='black'  # Adiciona borda preta às barras
+            edgecolor='black'
         )
         left = [l + c for l, c in zip(left, counts)]
 
-    # Define os rótulos do eixo y
     english_labels = ['OOP', 'Software Arch.', 'Web Tech.', 'Database Sys.',
                     'Project Mgmt.', 'Req. Eng.', 'Agile Methods', 'Use of LLMs']
-    ax.set_ylabel('Knowledge Areas', fontsize=18) # tamanho
-    ax.set_xlabel('Number of Participants', fontsize=18) # tamanho
-    ax.tick_params(axis='x', labelsize=14)  # tamanho
-    ax.set_title('Number of Participants by Knowledge Level per Area', fontsize=20) # tamanho
-    ax.set_yticks(index) # tamanho
-    ax.set_yticklabels(english_labels, fontsize=16) # tamanho
+    ax.set_ylabel('Knowledge Areas', fontsize=18)
+    ax.set_xlabel('Number of Participants', fontsize=18)
+    ax.tick_params(axis='x', labelsize=14)
+    ax.set_title('Number of Participants by Knowledge Level per Area', fontsize=20)
+    ax.set_yticks(index)
+    ax.set_yticklabels(english_labels, fontsize=16)
 
-    # Posiciona a legenda fora do gráfico, à direita
     ax.legend(
         title='Knowledge Level',
-        fontsize=16,          # tamanho do texto da legenda
-        title_fontsize=18,    # tamanho do título da legenda
+        fontsize=16,         
+        title_fontsize=18,
         bbox_to_anchor=(1.02, 1),
         loc='upper left',
         borderaxespad=0.
     )
 
     plt.tight_layout()
-    plt.savefig("./figs/KnowledgParticipants.png")
+    plt.savefig("./figs/participants_knowledge.png")
 
 def experience():
     url = "http://localhost:8000/participants"
@@ -82,7 +74,7 @@ def experience():
     response = requests.get(url, headers=headers)
     participants = response.json()["Participants"]
 
-    # Step 2: Extract and map experience values
+    # Extract experience values
     experience = [entry['experience'] for entry in participants]
 
     label_map = {
@@ -93,46 +85,49 @@ def experience():
     }
     experience = [label_map.get(exp, exp) for exp in experience]
 
-    # Step 3: Count and sort
+    # Count occurrences
     counts = Counter(experience)
-    sorted_items = sorted(counts.items(), key=lambda x: x[1], reverse=True)
-    labels, values = zip(*sorted_items)
 
-    # Step 4: Grayscale colors
-    gray_colors = ['#f2f2f2', '#c0c0c0', '#8c8c8c', '#404040']  # Adjust to number of categories
-    colors = gray_colors[:len(labels)]
+    # Explicit y-axis order (semantic order)
+    desired_order = [
+        "No experience",
+        "Up to 1 year",
+        "1 to 3 years",
+        "More than 3 years"
+    ]
 
-    # Step 5: Plot the bar chart
-    plt.figure(figsize=(8, 5))
-    bars = plt.bar(labels, values, color=colors, edgecolor="black")
+    labels = [label for label in desired_order if label in counts]
+    values = [counts[label] for label in labels]
 
-    # Add values on top of bars
+    # Plot
+    plt.figure(figsize=(9, 5))
+    bars = plt.barh(labels, values, color="0.7", edgecolor="black")
+
+    # Value labels
     for bar in bars:
-        height = bar.get_height()
+        width = bar.get_width()
         plt.text(
-            bar.get_x() + bar.get_width()/2,
-            height + 0.1,
-            str(height),
-            ha='center',
-            va='bottom',
-            fontsize=12
+            width + 0.1,
+            bar.get_y() + bar.get_height() / 2,
+            str(width),
+            va="center",
+            fontsize=16
         )
 
-    # Titles and labels
-    plt.title("Participants by Experience Level", fontsize=18)
-    plt.xlabel("Experience", fontsize=16)
-    plt.ylabel("Number of Participants", fontsize=16)
+    plt.title("Participants by Experience Level", fontsize=22)
+    plt.xlabel("Number of Participants", fontsize=20)
+    plt.ylabel("Experience Level", fontsize=20)
 
-    # Ticks
-    plt.xticks(rotation=17, fontsize=14)
-    plt.yticks(fontsize=14)
+    # Increase tick label font size
+    plt.xticks(fontsize=16)
+    plt.yticks(fontsize=16)
 
-    # Ajusta o limite do eixo Y para evitar que os números no topo das barras sejam cortados
-    max_value = max(values)
-    plt.ylim(top=max_value + 1.5)  # você pode ajustar o valor se necessário
+    plt.grid(axis="x", linestyle="--", alpha=0.6)
 
     plt.tight_layout()
-    plt.savefig("./figs/experience.png")
+    plt.savefig("./figs/experience.png", dpi=300)
+    plt.close()
+
 
 def specific_knowledge_by_time(topic = 'requirements'):
     # Step 1: Request data from the API with topic as a query param

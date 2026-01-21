@@ -1,9 +1,0 @@
-requests
-pandas
-matplotlib
-fastapi
-uvicorn[standard]
-sqlalchemy
-asyncpg
-python-dotenv
-plotly
