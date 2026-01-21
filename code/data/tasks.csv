@@ -21,7 +21,7 @@ E exibe mensagens de erro indicando quais campos precisam ser preenchidos
 ",6,10,,10,,10,91.5,"Muito bem estruturado, segue o template à risca, fluxos claros; faltou elemento inovador (ranking, pontos)."
 P002,G1,1 - TechFix,Sem o uso de LLM,"Título: Notificação enviada após solicitação do usuário.
 Descrição: O sistema irá enviar notificações aos especialistas a cada solicitação realizada por um usuário.
-Eu como Bernardo
+Eu como [MASK_NAME]
 Gostaria de obter notificações
 Para cada solicitação realizada pelo usuário","CASOS DE USO (Fluxo principal)
 DADO QUE: <O usuário entre no aplicativo para fazer uma solicitação sobre o problema>
@@ -47,7 +47,7 @@ QUANDO eu clicar no botão submeter
 ENTÃO o meu problema estará salvo no banco de dados da plataforma para que assim outros usuários consigam visualizá-lo. ",19,5,O conceito de caso de uso alternativo não foi bem entendido.,5,,5,79,"Correto, mas fluxo alternativo para usuário anônimo repete principal (deveria bloquear ou solicitar login)."
 P004,G1,1 - TechFix,Sem o uso de LLM,"TEMPLATE:
 DESCRIÇÃO:<Cadastro>
-EU COMO: <Carlos>
+EU COMO: <[MASK_NAME]>
 GOSTARIA DE: <Cadastrar chamados>
 PARA: <relatar problemas técnicos>","CASOS DE USO (Fluxo principal)
 DADO QUE: <Tenha um problema técnico>

@@ -13,15 +13,6 @@ CREATE TABLE participants (
     agile_methods TEXT,
     llm_usage TEXT,
     experience TEXT,
-    positive_llm TEXT,
-    negative_llm TEXT,
-    positive_nollm TEXT,
-    negative_nollm TEXT,
-    example_positive TEXT,
-    example_negative TEXT,
-    llm_influence TEXT,
-    general TEXT,
-    link TEXT
 );
 
 COPY participants
