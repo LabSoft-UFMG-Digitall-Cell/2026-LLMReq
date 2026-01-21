@@ -1,0 +1,66 @@
+code,Answer to the question: What are the positive aspects of using LLMs?,Open Coding,Category
+P001,"Speed and efficiency, clear and standardized structuring, ease of iteration and adaptation.",Fast Response,Time
+P001,"Speed and efficiency, clear and standardized structuring, ease of iteration and adaptation.",Standardization,Quality
+P001,"Speed and efficiency, clear and standardized structuring, ease of iteration and adaptation.",Ease of Use,Quality
+P002,Speed and greater ease in developing ideas when solving the task.,Fast Response,Time
+P002,Speed and greater ease in developing ideas when solving the task.,Ease of Use,Quality
+P002,Speed and greater ease in developing ideas when solving the task.,Creativity & Ideas,Quality
+P003,Time savings in repetitive tasks and inspiration for activities that require creativity.,Fast Response,Time
+P003,Time savings in repetitive tasks and inspiration for activities that require creativity.,Creativity & Ideas,Quality
+P004,"Greater ease in solving problems, saving time, and achieving a broader perspective.",Ease of Use,Quality
+P004,"Greater ease in solving problems, saving time, and achieving a broader perspective.",Fast Response,Time
+P004,"Greater ease in solving problems, saving time, and achieving a broader perspective.",Creativity & Ideas,Quality
+P005,Agility in drafting descriptions and use cases. Support in organizing ideas based on templates. Clear explanations and suggestions based on the provided context. Ease of reviewing and adjusting texts with instant feedback.,Agility,Time
+P005,Agility in drafting descriptions and use cases. Support in organizing ideas based on templates. Clear explanations and suggestions based on the provided context. Ease of reviewing and adjusting texts with instant feedback.,Creativity & Ideas,Quality
+P005,Agility in drafting descriptions and use cases. Support in organizing ideas based on templates. Clear explanations and suggestions based on the provided context. Ease of reviewing and adjusting texts with instant feedback.,Clarity,Quality
+P006,Speed and accuracy.,Fast Response,Time
+P006,Speed and accuracy.,Precision,Time
+P007,The speed of generating descriptions with the same standard for multiple user stories and use cases.,Fast Response,Time
+P007,The speed of generating descriptions with the same standard for multiple user stories and use cases.,Standardization,Quality
+P008,Speed.,Fast Response,Time
+P009,Ease of interpreting and identifying contexts and examples for responses.,Ease of Use,Quality
+P009,Ease of interpreting and identifying contexts and examples for responses.,Clarity,Quality
+P010,Greater speed and practicality.,Fast Response,Time
+P010,Greater speed and practicality.,Precision,Time
+P011,"The main positive aspects of performing the task are practicality, speed, and support.",Fast Response,Time
+P011,"The main positive aspects of performing the task are practicality, speed, and support.",Ease of Use,Quality
+P011,"The main positive aspects of performing the task are practicality, speed, and support.",Precision,Time
+P012,"Practicality, different perspectives, and detailed explanations.",Fast Response,Time
+P012,"Practicality, different perspectives, and detailed explanations.",Context,Quality
+P012,"Practicality, different perspectives, and detailed explanations.",Clarity,Quality
+P012,"Practicality, different perspectives, and detailed explanations.",Precision,Time
+P013,"Practicality and agility in creating model topics, delivering use cases that you might not have noticed.",Fast Response,Time
+P013,"Practicality and agility in creating model topics, delivering use cases that you might not have noticed.",Creativity & Ideas,Quality
+P013,"Practicality and agility in creating model topics, delivering use cases that you might not have noticed.",Precision,Time
+P014,"You can clarify many doubts that may arise during task execution. For example, in the first questionnaire, I could not recall what normal and alternative flows were. This significantly speeds up problem-solving and makes the work much more productive.",Creativity & Ideas,Quality
+P014,"You can clarify many doubts that may arise during task execution. For example, in the first questionnaire, I could not recall what normal and alternative flows were. This significantly speeds up problem-solving and makes the work much more productive.",Agility,Time
+P015,Speed and dynamism.,Fast Response,Time
+P016,"The ease of understanding what is being explained, and since it already generates content, it becomes easier to simply modify what I believe is incorrect. Additionally, if there are doubts, I can ask for clarification, and of course, benefit from agility in performing the task.",Ease of Use,Quality
+P016,"The ease of understanding what is being explained, and since it already generates content, it becomes easier to simply modify what I believe is incorrect. Additionally, if there are doubts, I can ask for clarification, and of course, benefit from agility in performing the task.",Clarity,Quality
+P016,"The ease of understanding what is being explained, and since it already generates content, it becomes easier to simply modify what I believe is incorrect. Additionally, if there are doubts, I can ask for clarification, and of course, benefit from agility in performing the task.",Agility,Time
+P017,"Helps improve ideas, speed up processes, and acquire new knowledge quickly.",Creativity & Ideas,Quality
+P017,"Helps improve ideas, speed up processes, and acquire new knowledge quickly.",Agility,Time
+P017,"Helps improve ideas, speed up processes, and acquire new knowledge quickly.",Fast Response,Time
+P018,"The use of LLMs for tasks such as user story creation offers several benefits, including agility in content generation, standardization based on predefined templates, and creative suggestions for both main and alternative flows. Additionally, it reduces common errors and rework, facilitating communication between technical and non-technical teams. It also allows customization of detail levels according to the audience and ensures clear, complete, and consistent documentation, optimizing the requirements definition process in agile projects.",Agility,Time
+P018,"The use of LLMs for tasks such as user story creation offers several benefits, including agility in content generation, standardization based on predefined templates, and creative suggestions for both main and alternative flows. Additionally, it reduces common errors and rework, facilitating communication between technical and non-technical teams. It also allows customization of detail levels according to the audience and ensures clear, complete, and consistent documentation, optimizing the requirements definition process in agile projects.",Clarity,Quality
+P018,"The use of LLMs for tasks such as user story creation offers several benefits, including agility in content generation, standardization based on predefined templates, and creative suggestions for both main and alternative flows. Additionally, it reduces common errors and rework, facilitating communication between technical and non-technical teams. It also allows customization of detail levels according to the audience and ensures clear, complete, and consistent documentation, optimizing the requirements definition process in agile projects.",Standardization,Quality
+P019,"Ease of use, time savings, and practicality.",Ease of Use,Quality
+P019,"Ease of use, time savings, and practicality.",Time,Time
+P019,"Ease of use, time savings, and practicality.",Precision,Time
+P020,"Agility in content production, ease of following predefined structures such as templates, and support in generating ideas in a clear and cohesive way. Additionally, the LLM can provide creative and well-founded suggestions, accelerating tasks that require writing or planning.",Agility,Time
+P020,"Agility in content production, ease of following predefined structures such as templates, and support in generating ideas in a clear and cohesive way. Additionally, the LLM can provide creative and well-founded suggestions, accelerating tasks that require writing or planning.",Clarity,Quality
+P020,"Agility in content production, ease of following predefined structures such as templates, and support in generating ideas in a clear and cohesive way. Additionally, the LLM can provide creative and well-founded suggestions, accelerating tasks that require writing or planning.",Creativity & Ideas,Quality
+P021,"It quickly generates responses and does so accurately. If the result does not meet expectations, small adjustments can be made.",Fast Response,Time
+P021,"It quickly generates responses and does so accurately. If the result does not meet expectations, small adjustments can be made.",Precision,Time
+P022,The speed at which tasks can be completed.,Fast Response,Time
+P023,Speed in solving problems and identifying new use cases that were not previously considered.,Fast Response,Time
+P023,Speed in solving problems and identifying new use cases that were not previously considered.,Creativity & Ideas,Quality
+P024,Faster and more practical.,Fast Response,Time
+P025,"Ease in obtaining ideas for possible scenarios and usage contexts based on the story, as well as correction and evaluation of the user’s response.",Creativity & Ideas,Quality
+P025,"Ease in obtaining ideas for possible scenarios and usage contexts based on the story, as well as correction and evaluation of the user’s response.",Precision,Time
+P025,"Ease in obtaining ideas for possible scenarios and usage contexts based on the story, as well as correction and evaluation of the user’s response.",Context,Quality
+P026,Task execution is much faster and helps generate insights.,Fast Response,Time
+P026,Task execution is much faster and helps generate insights.,Creativity & Ideas,Quality
+P027,Speeding up the work process.,Agility,Time
+P028,"Higher speed with improved response quality, depending on the question.",Fast Response,Time
+P028,"Higher speed with improved response quality, depending on the question.",Creativity & Ideas,Quality

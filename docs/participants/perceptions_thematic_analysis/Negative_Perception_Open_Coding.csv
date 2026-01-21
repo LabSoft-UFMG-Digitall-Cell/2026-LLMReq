@@ -1,0 +1,58 @@
+code,Answer to the question: What are the negative aspects of using LLMs?,Open Coding,Category
+P001,"Lack of deep domain context; responses may be generic or superficial, leading to excessive dependence on an external tool.",Reduced Learning,Learning
+P001,"Lack of deep domain context; responses may be generic or superficial, leading to excessive dependence on an external tool.",Generic Solution,Reliability
+P001,"Lack of deep domain context; responses may be generic or superficial, leading to excessive dependence on an external tool.",Overdependence,Learning
+P002,"Reduced learning, as individuals tend to rely on the use of LLMs and consequently think less about the activity.",Overdependence,Learning
+P002,"Reduced learning, as individuals tend to rely on the use of LLMs and consequently think less about the activity.",Reduced Learning,Learning
+P003,Dependence on LLMs. Generic responses.,Overdependence,Learning
+P003,Dependence on LLMs. Generic responses.,Generic Solution,Reliability
+P004,"Not making enough effort to solve problems, which may end up limiting you in other projects without using the tool.",Overdependence,Learning
+P004,"Not making enough effort to solve problems, which may end up limiting you in other projects without using the tool.",Reduced Learning,Learning
+P005,"It can create dependency, reducing the practice of autonomous writing. If the question is poorly formulated, the outcome may be different from what was expected. The model does not always understand specific constraints defined by the instructor.",Overdependence,Learning
+P005,"It can create dependency, reducing the practice of autonomous writing. If the question is poorly formulated, the outcome may be different from what was expected. The model does not always understand specific constraints defined by the instructor.",Reduced Learning,Learning
+P005,"It can create dependency, reducing the practice of autonomous writing. If the question is poorly formulated, the outcome may be different from what was expected. The model does not always understand specific constraints defined by the instructor.",Misalignment,Reliability
+P006,Lack of authenticity.,Generic Solution,Reliability
+P007,"They are not always correct; therefore, the time required to review the user story and the use case becomes longer.",Inaccurate,Reliability
+P007,"They are not always correct; therefore, the time required to review the user story and the use case becomes longer.",Generic Solution,Reliability
+P008,Generic responses.,Generic Solution,Reliability
+P009,Sticking to an idea that is not your own can make it difficult to follow a coherent line of reasoning.,Loss of Personal Authorship,Learning
+P009,Sticking to an idea that is not your own can make it difficult to follow a coherent line of reasoning.,Reduced Creativity,Learning
+P010,There is a chance that the AI may misinterpret the requests and deliver incorrect responses.,Misinterpretation,Reliability
+P010,"Há chances da IA interpretar errado as solicitações, e entregar respostas equivocadas.",Misalignment,Reliability
+P011,The main negative aspects of performing the task are automated responses and limitations in reasoning ability.,Overdependence,Learning
+P011,The main negative aspects of performing the task are automated responses and limitations in reasoning ability.,Reduced Learning,Learning
+P012,"Generic responses and, consequently, generic use cases.",Generic Solution,Reliability
+P012,"Generic responses and, consequently, generic use cases.",Inaccurate,Reliability
+P013,Tendency not to read what was delivered and the need to correct context.,Overdependence,Learning
+P013,Tendency not to read what was delivered and the need to correct context.,Inaccurate,Reliability
+P014,"Many times we take the LLM’s response as true without even reading it or searching for other information sources, which can lead to the use of incorrect or generic information.",Lack of Critical Thinking,Learning
+P014,"Many times we take the LLM’s response as true without even reading it or searching for other information sources, which can lead to the use of incorrect or generic information.",Generic Solution,Reliability
+P014,"Many times we take the LLM’s response as true without even reading it or searching for other information sources, which can lead to the use of incorrect or generic information.",Loss of Personal Authorship,Learning
+P015,Lack of personalization in thinking.,Loss of Personal Authorship,Learning
+P016,"As a negative point, I believe that not needing to put much effort into thinking about the task may prevent proper consolidation of knowledge on a given subject.",Overdependence,Learning
+P016,"As a negative point, I believe that not needing to put much effort into thinking about the task may prevent proper consolidation of knowledge on a given subject.",Reduced Learning,Learning
+P017,Reduced creativity and impaired learning depending on how it is used.,Lack of Critical Thinking,Learning
+P017,Reduced creativity and impaired learning depending on how it is used.,Reduced Learning,Learning
+P018,"Although the use of LLMs brings many benefits, there are also some negative aspects to consider. The main limitation is that the model may generate content that seems correct but contains inaccuracies or does not fully reflect the project context, requiring constant human validation. In addition, there may be excessive generalization or a lack of sensitivity to specific business rules if they are not clearly provided. Another issue is that continuous use without critical reflection may reduce the team’s active participation in requirements construction, which can affect alignment and understanding of the final product.",Inaccurate,Reliability
+P018,"Although the use of LLMs brings many benefits, there are also some negative aspects to consider. The main limitation is that the model may generate content that seems correct but contains inaccuracies or does not fully reflect the project context, requiring constant human validation. In addition, there may be excessive generalization or a lack of sensitivity to specific business rules if they are not clearly provided. Another issue is that continuous use without critical reflection may reduce the team’s active participation in requirements construction, which can affect alignment and understanding of the final product.",Generic Solution,Reliability
+P018,"Although the use of LLMs brings many benefits, there are also some negative aspects to consider. The main limitation is that the model may generate content that seems correct but contains inaccuracies or does not fully reflect the project context, requiring constant human validation. In addition, there may be excessive generalization or a lack of sensitivity to specific business rules if they are not clearly provided. Another issue is that continuous use without critical reflection may reduce the team’s active participation in requirements construction, which can affect alignment and understanding of the final product.",Lack of Critical Thinking,Learning
+P018,"Although the use of LLMs brings many benefits, there are also some negative aspects to consider. The main limitation is that the model may generate content that seems correct but contains inaccuracies or does not fully reflect the project context, requiring constant human validation. In addition, there may be excessive generalization or a lack of sensitivity to specific business rules if they are not clearly provided. Another issue is that continuous use without critical reflection may reduce the team’s active participation in requirements construction, which can affect alignment and understanding of the final product.",Misinterpretation,Reliability
+P018,"Although the use of LLMs brings many benefits, there are also some negative aspects to consider. The main limitation is that the model may generate content that seems correct but contains inaccuracies or does not fully reflect the project context, requiring constant human validation. In addition, there may be excessive generalization or a lack of sensitivity to specific business rules if they are not clearly provided. Another issue is that continuous use without critical reflection may reduce the team’s active participation in requirements construction, which can affect alignment and understanding of the final product.",Misalignment,Reliability
+P019,Not even making the effort to check what was generated.,Overdependence,Learning
+P019,Not even making the effort to check what was generated.,Lack of Critical Thinking,Learning
+P020,"The possibility of generating generic responses or responses that do not fully fit the user’s specific context. There is also the risk of dependence on the model for tasks that could be performed autonomously, in addition to the need to review generated content to ensure accuracy and suitability for its purpose.",Generic Solution,Reliability
+P020,"The possibility of generating generic responses or responses that do not fully fit the user’s specific context. There is also the risk of dependence on the model for tasks that could be performed autonomously, in addition to the need to review generated content to ensure accuracy and suitability for its purpose.",Overdependence,Learning
+P020,"The possibility of generating generic responses or responses that do not fully fit the user’s specific context. There is also the risk of dependence on the model for tasks that could be performed autonomously, in addition to the need to review generated content to ensure accuracy and suitability for its purpose.",Review,Learning
+P021,"It removes the opportunity for critical thinking and independent development, which negatively influences task performance in the long term.",Overdependence,Learning
+P021,"It removes the opportunity for critical thinking and independent development, which negatively influences task performance in the long term.",Reduced Learning,Learning
+P021,"It removes the opportunity for critical thinking and independent development, which negatively influences task performance in the long term.",Lack of Critical Thinking,Learning
+P022,Generic responses.,Generic Solution,Reliability
+P023,"The result may be far from the expected scenario. In addition, you may become dependent on the tool, since the material is already provided.",Inaccurate,Reliability
+P023,"The result may be far from the expected scenario. In addition, you may become dependent on the tool, since the material is already provided.",Overdependence,Learning
+P024,Responses are not always correct.,Inaccurate,Reliability
+P025,"Lack of attention from the developer, making it difficult to notice details in the generated or used scenario.",Lack of Critical Thinking,Learning
+P026,"Artificial intelligence, especially ChatGPT, often hallucinates. Therefore, if the user lacks critical ability and prior knowledge about the topic, there is a high chance of receiving an incorrect answer and submitting it as such.",Inaccurate,Reliability
+P026,"Artificial intelligence, especially ChatGPT, often hallucinates. Therefore, if the user lacks critical ability and prior knowledge about the topic, there is a high chance of receiving an incorrect answer and submitting it as such.",Misinterpretation,Reliability
+P026,"Artificial intelligence, especially ChatGPT, often hallucinates. Therefore, if the user lacks critical ability and prior knowledge about the topic, there is a high chance of receiving an incorrect answer and submitting it as such.",Lack of Critical Thinking,Learning
+P027,Lack of correction and validation of requirements.,Lack of Critical Thinking,Learning
+P028,Lower content adherence to the student using the LLM.,Reduced Learning,Learning
