@@ -41,5 +41,5 @@ async def get_participants(db: AsyncSession = Depends(get_db)):
 @router.get("/tasks")
 async def get_tasks(db: AsyncSession = Depends(get_db)):
     result = await db.execute(text("SELECT * FROM tasks"))
-    tasks = result.mappings().all()  # <- Use mappings()
+    tasks = result.mappings().all()
     return {"Tasks": [dict(row) for row in tasks]}
