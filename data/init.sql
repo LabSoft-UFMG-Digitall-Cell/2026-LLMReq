@@ -25,13 +25,8 @@ CREATE TABLE participants (
 );
 
 COPY participants
-FROM '/data/participants.csv'
-WITH (
-    FORMAT csv,
-    HEADER,
-    DELIMITER ',',
-    QUOTE '"'
-);
+FROM '/docker-entrypoint-initdb.d/participants.csv'
+WITH (FORMAT csv, HEADER);
 
 DROP TABLE IF EXISTS tasks;
 
@@ -54,10 +49,5 @@ CREATE TABLE tasks (
 );
 
 COPY tasks
-FROM '/data/tasks.csv'
-WITH (
-    FORMAT csv,
-    HEADER,
-    DELIMITER ',',
-    QUOTE '"'
-);
+FROM '/docker-entrypoint-initdb.d/tasks.csv'
+WITH (FORMAT csv, HEADER);

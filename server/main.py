@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-import query
-import database
+import query as query
+import database as database
 
 app = FastAPI()
 app.include_router(database.router)
