@@ -1,4 +1,4 @@
-# Sbes-2025-LLMReq
+# 2026-LLMReq
 
 ## Run
 - docker compose up --build
