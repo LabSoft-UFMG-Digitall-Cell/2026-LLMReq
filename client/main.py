@@ -1,7 +1,8 @@
 from participants import knowledge_distribuition, experience, specific_knowledge_by_time
-from results import boxplotLLM, positive_usage_llm
+from results import boxplotLLM
 from categorization import open_coding_categorization
-from sankey import sankey_interaction_flows
+from interactions import sankey_interaction_flows
+from perception import build_sankey_negative, build_sankey_positive
 
 if __name__ == "__main__":
     print("This is the main entry point for the client API.")
@@ -15,9 +16,10 @@ if __name__ == "__main__":
             "4 - Boxplot LLM usage by grade\n"
             "5 - Specific Knowledge by Topic\n"
             "6 - Positive LLM usage diagram\n"
-            "7 - Boxplot LLM usage by LLM grade\n"
-            "8 - Open Coding Categorization\n"
-            "9 - Sankey Diagram\n"
+            "7 - Negative LLM usage diagram\n"
+            "8 - Boxplot LLM usage by LLM grade\n"
+            "9 - Open Coding Categorization\n"
+            "10 - Sankey Diagram\n"
             "0 - Exit\n"
         )
 
@@ -44,17 +46,21 @@ if __name__ == "__main__":
 
         elif graph == "6":
             print("Generating Positive LLM usage diagram...")
-            positive_usage_llm()
+            build_sankey_positive()
 
         elif graph == "7":
+            print("Generating Negative LLM usage diagram...")
+            build_sankey_negative()
+
+        elif graph == "8":
             print("Generating Boxplot for LLM usage by LLM grade...")
             boxplotLLM("grad_llm")
-        
-        elif graph == "8":
+
+        elif graph == "9":
             print("Generating Open Coding Categorization graph...")
             open_coding_categorization()
-        
-        elif graph == "9":
+
+        elif graph == "10":
             print("Generating Sankey Diagram...")
             sankey_interaction_flows()
 

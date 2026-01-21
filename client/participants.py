@@ -169,3 +169,5 @@ def specific_knowledge_by_time(topic = 'requirements'):
     plt.ylabel('Time (minutes)')
     plt.tight_layout()
     plt.savefig(f"./figs/{topic}_knowledge_time.png")
+
+
