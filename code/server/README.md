@@ -25,6 +25,7 @@ code/
 ├── data/
 │   ├── participants.csv
 │   ├── tasks.csv
+│   ├── User_Model_Interaction.csv
 │   └── init.sql
 └── server/
     ├── main.py
