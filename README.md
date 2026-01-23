@@ -33,7 +33,7 @@ docs/
 
 This folder contains one Markdown file per participant (e.g., `P002.md`, `P003.md`). Each file corresponds to a shared interaction link provided by the participant and contains raw interaction logs between the participant and the LLM. These files represent the primary qualitative data source.
 
-👉 **[Access shared links](docs/participants/interactions_thematic_analysis/shared_link/)**
+👉 **[docs/participants/interactions_thematic_analysis/shared_link/](docs/participants/interactions_thematic_analysis/shared_link/)**
 
 ### Consolidated Interaction Dataset
 
