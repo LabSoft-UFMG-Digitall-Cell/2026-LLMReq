@@ -82,7 +82,7 @@ Once running, the services are available at:
 - **API root**: http://localhost:8000
 - **Health check**: http://localhost:8000/health
 
-Expected health response:
+Expected health response example:
 ```json
 {
   "existing_tables": ["participants", "tasks"]
