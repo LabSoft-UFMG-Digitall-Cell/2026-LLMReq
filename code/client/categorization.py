@@ -14,8 +14,10 @@ def open_coding_categorization():
         .str.replace("Model ", "", regex=False)
     )
 
-    pivot.plot(kind="barh")
+    ax = pivot.plot(kind="barh")
     plt.xlabel("Frequency")
-    plt.title("Interaction Behaviors by Persona")
+    plt.ylabel("Code")
+    plt.title("Interactions Behaviour by Actor")
+    ax.legend(title="Actor")
     plt.tight_layout()
     plt.savefig("./figs/open_coding.png")

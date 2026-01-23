@@ -41,7 +41,7 @@ def sankey_interaction_flows():
     flow = trans_df.value_counts().reset_index(name="value")
 
     # Filter dominant flows
-    flow = flow[flow["value"] >= 3]
+    flow = flow[flow["value"] >= 4]
 
     labels = pd.unique(pd.concat([flow["source"], flow["target"]])).tolist()
     idx = {l: i for i, l in enumerate(labels)}
