@@ -52,15 +52,12 @@ if __name__ == "__main__":
             print("Generating Negative LLM usage diagram...")
             build_sankey_negative()
 
-        elif graph == "8":
-            print("Generating Boxplot for LLM usage by LLM grade...")
-            boxplotLLM("grad_llm")
 
-        elif graph == "9":
+        elif graph == "8":
             print("Generating Open Coding Categorization graph...")
             open_coding_categorization()
 
-        elif graph == "10":
+        elif graph == "9":
             print("Generating Sankey Diagram...")
             sankey_interaction_flows()
 
