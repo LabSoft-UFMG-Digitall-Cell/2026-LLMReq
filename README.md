@@ -63,7 +63,7 @@ This dataset contains participants’ self-reported background knowledge and exp
 
 This file includes participants’ feedback on LLM usage regarding the challenge and benefits percieved.
 
-👉 **[2026-LLMREQ/code/docs/participants/usage_llm_feedbacks.csv](docs/participants/interactions_thematic_analysis/User_Model_Interaction.csv)**
+👉 **[2026-LLMREQ/code/docs/participants/usage_llm_feedbacks.csv](docs/participants/usage_llm_feedbacks.csv)**
 
 ### Perceptions Thematic Analysis
 
