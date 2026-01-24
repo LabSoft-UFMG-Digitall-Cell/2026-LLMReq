@@ -69,7 +69,9 @@ This file includes participants’ feedback on LLM usage regarding the challenge
 
 This directory contains materials related to the thematic analysis of participant perceptions derived from feedback regarding llm usage.
 
-👉 **[2026-LLMREQ/code/docs/participants/perceptions_thematic_analysis/](docs/participants/interactions_thematic_analysis/User_Model_Interaction.csv)**
+- Challenges: 👉 **[2026-LLMREQ/code/docs/participants/perceptions_thematic_analysis/Negative_Perception_Open_Coding](docs/participants/perceptions_thematic_analysis/Negative_Perception_Open_Coding.csv)**
+
+- Benefits: 👉 **[2026-LLMREQ/code/docs/participants/perceptions_thematic_analysis/Negative_Perception_Open_Coding](docs/participants/perceptions_thematic_analysis/Positive_Perception_Open_Coding.csv)**
 
 
 ## Aplication to Analysis (code)
@@ -88,24 +90,37 @@ code/client/figs/
 
 ## 📊 Graph Options Explained
 
+The program runs in a loop and asks which graph you want to generate:
+
+```
+Do you want to generate any graph?
+1  - Knowledge Distribution
+2  - Experience Distribution
+3  - Boxplot LLM usage by time
+4  - Boxplot LLM usage by grade
+5  - Specific Knowledge by Topic
+6  - Positive LLM usage diagram
+7  - Negative LLM usage diagram
+8  - Open Coding Categorization
+9  - Sankey Diagram
+0  - Exit
+```
+
 ### 1️⃣ Knowledge Distribution
 ```text
 Option: 1
+Produces a distribution of participants' prior knowledge
 ```
-- Calls `knowledge_distribuition()`
-- Produces a distribution of participants' prior knowledge
 
 ![Knowledge Distribution](code/client/figs/participants_knowledge.png)
-
 
 ---
 
 ### 2️⃣ Experience Distribution
 ```text
 Option: 2
+Shows participants' experience levels
 ```
-- Calls `experience()`
-- Shows participants' experience levels
 
 ![Knowledge Distribution](code/client/figs/experience.png)
 
@@ -114,9 +129,8 @@ Option: 2
 ### 3️⃣ Boxplot – LLM Usage by Time
 ```text
 Option: 3
+Compares LLM usage considering time-related measures
 ```
-- Calls `boxplotLLM("time")`
-- Compares LLM usage considering time-related measures
 
 ![Knowledge Distribution](code/client/figs/boxplot_time_llm.png)
 
@@ -125,9 +139,8 @@ Option: 3
 ### 4️⃣ Boxplot – LLM Usage by Grade
 ```text
 Option: 4
+Relates LLM usage to participants' academic grades
 ```
-- Calls `boxplotLLM("grad_mean")`
-- Relates LLM usage to participants' academic grades
 
 ![Knowledge Distribution](code/client/figs/boxplot_time_llm.png)
 
@@ -136,21 +149,18 @@ Option: 4
 ### 5️⃣ Specific Knowledge by Topic
 ```text
 Option: 5
+Currently fixed topic: `requirements`
+Can be extended for other topics
 ```
-- Calls `specific_knowledge_by_time(topic)`
-- Currently fixed topic: `requirements`
-- Can be extended for other topics
 
 ![Knowledge Distribution](code/client/figs/requirements_knowledge_time.png)
-
 ---
 
 ### 6️⃣ Positive LLM Usage Sankey
 ```text
 Option: 6
+Visualizes positive perceptions of LLM usage
 ```
-- Calls `build_sankey_positive()`
-- Visualizes positive perceptions of LLM usage
 
 ![Knowledge Distribution](code/client/figs/sankey_positive.png)
 
@@ -159,9 +169,8 @@ Option: 6
 ### 7️⃣ Negative LLM Usage Sankey
 ```text
 Option: 7
+Visualizes negative perceptions (e.g., overdependence, reduced learning)
 ```
-- Calls `build_sankey_negative()`
-- Visualizes negative perceptions (e.g., overdependence, reduced learning)
 
 ![Knowledge Distribution](code/client/figs/sankey_negative.png)
 
@@ -169,9 +178,8 @@ Option: 7
 ### 8️⃣ Open Coding Categorization
 ```text
 Option: 8
-```
-- Calls `open_coding_categorization()`
 - Generates categorical analysis from open-ended responses
+```
 
 ![Knowledge Distribution](code/client/figs/open_coding.png)
 
@@ -179,9 +187,8 @@ Option: 8
 ### 9️⃣ Interaction Flow Sankey
 ```text
 Option: 9
+Shows user–LLM interaction flows as a Sankey diagram
 ```
-- Calls `sankey_interaction_flows()`
-- Shows user–LLM interaction flows as a Sankey diagram
 
 ![Knowledge Distribution](code/client/figs/sankey_interactions_flows.png)
 
