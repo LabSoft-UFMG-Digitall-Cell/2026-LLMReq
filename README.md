@@ -39,7 +39,11 @@ The codebook defines all codes used in the thematic analysis, including definiti
 
 👉 **[2026-LLMREQ/code/docs/participants/interactions_thematic_analysis/CodeBook.md](docs/participants/interactions_thematic_analysis/CodeBook.md)**
 
+### Open Coding Documentation
 
+This document provides the open coding applied to the interaction data and supports traceability from codes back to participant interactions.
+
+👉 **[2026-LLMREQ/code/docs/participants/interactions_thematic_analysis/Open_Coding.md](docs/participants/interactions_thematic_analysis/Open_Coding.md)**
 
 ### Consolidated Interaction Dataset
 
@@ -47,37 +51,25 @@ This file aggregates information extracted from the shared interaction links int
 
 👉 **[2026-LLMREQ/code/docs/participants/interactions_thematic_analysis/User_Model_Interaction.csv](docs/participants/interactions_thematic_analysis/User_Model_Interaction.csv)**
 
-### Open Coding Documentation
-
-```
-docs/participants/interactions_thematic_analysis/Open_Coding.md
-```
-
-This document provides the open coding applied to the interaction data and supports traceability from codes back to participant interactions.
 
 ### Background Knowledge and Experience
 
-```
-docs/participants/knowledge_experience.csv
-```
-
 This dataset contains participants’ self-reported background knowledge and experience levels and supports knowledge and experience distribution analyses.
+
+👉 **[2026-LLMREQ/code/docs/participants/knowledge_experience.csv](docs/participants/interactions_thematic_analysis/User_Model_Interaction.csv)**
+
 
 ### LLM Usage and Feedback
 
-```
-docs/participants/usage_llm_feedbacks.csv
-```
-
 This file includes participants’ feedback on LLM usage regarding the challenge and benefits percieved.
+
+👉 **[2026-LLMREQ/code/docs/participants/usage_llm_feedbacks.csv](docs/participants/interactions_thematic_analysis/User_Model_Interaction.csv)**
 
 ### Perceptions Thematic Analysis
 
-```
-docs/participants/perceptions_thematic_analysis/
-```
-
 This directory contains materials related to the thematic analysis of participant perceptions derived from feedback regarding llm usage.
+
+👉 **[2026-LLMREQ/code/docs/participants/perceptions_thematic_analysis/](docs/participants/interactions_thematic_analysis/User_Model_Interaction.csv)**
 
 
 ## Aplication to Analysis (code)
@@ -93,3 +85,110 @@ All executable artifacts are in `code/`:
 ```
 code/client/figs/
 ```
+
+## 📊 Graph Options Explained
+
+### 1️⃣ Knowledge Distribution
+```text
+Option: 1
+```
+- Calls `knowledge_distribuition()`
+- Produces a distribution of participants' prior knowledge
+
+![Knowledge Distribution](code/client/figs/participants_knowledge.png)
+
+
+---
+
+### 2️⃣ Experience Distribution
+```text
+Option: 2
+```
+- Calls `experience()`
+- Shows participants' experience levels
+
+![Knowledge Distribution](code/client/figs/experience.png)
+
+---
+
+### 3️⃣ Boxplot – LLM Usage by Time
+```text
+Option: 3
+```
+- Calls `boxplotLLM("time")`
+- Compares LLM usage considering time-related measures
+
+![Knowledge Distribution](code/client/figs/boxplot_time_llm.png)
+
+---
+
+### 4️⃣ Boxplot – LLM Usage by Grade
+```text
+Option: 4
+```
+- Calls `boxplotLLM("grad_mean")`
+- Relates LLM usage to participants' academic grades
+
+![Knowledge Distribution](code/client/figs/boxplot_time_llm.png)
+
+---
+
+### 5️⃣ Specific Knowledge by Topic
+```text
+Option: 5
+```
+- Calls `specific_knowledge_by_time(topic)`
+- Currently fixed topic: `requirements`
+- Can be extended for other topics
+
+![Knowledge Distribution](code/client/figs/requirements_knowledge_time.png)
+
+---
+
+### 6️⃣ Positive LLM Usage Sankey
+```text
+Option: 6
+```
+- Calls `build_sankey_positive()`
+- Visualizes positive perceptions of LLM usage
+
+![Knowledge Distribution](code/client/figs/sankey_positive.png)
+
+---
+
+### 7️⃣ Negative LLM Usage Sankey
+```text
+Option: 7
+```
+- Calls `build_sankey_negative()`
+- Visualizes negative perceptions (e.g., overdependence, reduced learning)
+
+![Knowledge Distribution](code/client/figs/sankey_negative.png)
+
+---
+### 8️⃣ Open Coding Categorization
+```text
+Option: 8
+```
+- Calls `open_coding_categorization()`
+- Generates categorical analysis from open-ended responses
+
+![Knowledge Distribution](code/client/figs/open_coding.png)
+
+---
+### 9️⃣ Interaction Flow Sankey
+```text
+Option: 9
+```
+- Calls `sankey_interaction_flows()`
+- Shows user–LLM interaction flows as a Sankey diagram
+
+![Knowledge Distribution](code/client/figs/sankey_interactions_flows.png)
+
+---
+### 0️⃣ Exit
+```text
+Option: 0
+```
+- Terminates the program
+---
