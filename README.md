@@ -56,7 +56,7 @@ This file aggregates information extracted from the shared interaction links int
 
 This dataset contains participants’ self-reported background knowledge and experience levels and supports knowledge and experience distribution analyses.
 
-👉 **[2026-LLMREQ/code/docs/participants/knowledge_experience.csv](docs/participants/interactions_thematic_analysis/User_Model_Interaction.csv)**
+👉 **[2026-LLMREQ/code/docs/participants/knowledge_experience.csv](docs/participants/knowledge_experience.csv)**
 
 
 ### LLM Usage and Feedback
