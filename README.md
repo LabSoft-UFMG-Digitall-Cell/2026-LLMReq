@@ -4,7 +4,7 @@ This repository contains the replication package for the study.
 
 ## Participants and Tasks Documentation (docs)
 
-The `docs/` directory contains all documentation artifacts related to participants and experimental tasks used in the study. It includes raw qualitative data, thematic analyses, and supporting quantitative datasets, ensuring transparency, traceability, and reproducibility of the reported results.
+The `2026-LLMREQ/code/docs/` directory contains all documentation artifacts related to participants and experimental tasks used in the study.
 
 ### Directory structure
 
@@ -29,19 +29,23 @@ docs/
 ```
 
 ### Raw Interaction Data (Shared Links)
+This folder contains one Markdown file per participant (e.g., `P002.md`, `P003.md`). Each file corresponds to a shared interaction link provided by the participant and contains raw interaction logs between the participant and the LLM.
+
+👉 **[2026-LLMREQ/code/docs/participants/interactions_thematic_analysis/shared_link/](docs/participants/interactions_thematic_analysis/shared_link/P002.md)**
+
+### Codebook
+
+The codebook defines all codes used in the thematic analysis, including definitions, ensuring replicability.
+
+👉 **[2026-LLMREQ/code/docs/participants/interactions_thematic_analysis/CodeBook.md](docs/participants/interactions_thematic_analysis/CodeBook.md)**
 
 
-This folder contains one Markdown file per participant (e.g., `P002.md`, `P003.md`). Each file corresponds to a shared interaction link provided by the participant and contains raw interaction logs between the participant and the LLM. These files represent the primary qualitative data source.
-
-👉 **[docs/participants/interactions_thematic_analysis/shared_link/](docs/participants/interactions_thematic_analysis/shared_link/)**
 
 ### Consolidated Interaction Dataset
 
-```
-docs/participants/interactions_thematic_analysis/User_Model_Interaction.csv
-```
-
 This file aggregates information extracted from the shared interaction links into a structured dataset. It is used by the client scripts to generate the visualizations.
+
+👉 **[2026-LLMREQ/code/docs/participants/interactions_thematic_analysis/User_Model_Interaction.csv](docs/participants/interactions_thematic_analysis/User_Model_Interaction.csv)**
 
 ### Open Coding Documentation
 
@@ -50,14 +54,6 @@ docs/participants/interactions_thematic_analysis/Open_Coding.md
 ```
 
 This document provides the open coding applied to the interaction data and supports traceability from codes back to participant interactions.
-
-### Codebook
-
-```
-docs/participants/interactions_thematic_analysis/CodeBook.md
-```
-
-The codebook defines all codes used in the thematic analysis, including definitions, ensuring replicability.
 
 ### Background Knowledge and Experience
 
