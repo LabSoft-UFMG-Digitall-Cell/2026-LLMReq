@@ -70,9 +70,6 @@ This directory contains materials related to the thematic analysis of participan
 ## Tasks Directory Structure
 
 This directory contains all artifacts related to the **experimental tasks** executed by participants during the study.
-The tasks are designed to assess participants’ ability to perform **requirements elicitation activities** with and without the support of Large Language Models (LLMs).
-
-Each task requires participants to create a **user story** and **two use cases** (one main/normal flow and one alternative flow), following a predefined template.
 
 ```
 docs/tasks/
@@ -244,5 +241,6 @@ Option: 0
 - Terminates the program
 
 ---
+
 
 
