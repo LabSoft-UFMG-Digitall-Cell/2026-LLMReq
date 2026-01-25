@@ -77,7 +77,7 @@ Each task requires participants to create a **user story** and **two use cases**
 ```
 docs/tasks/
 ├── Background.md
-├── Guideline.md
+├── Guideline.pdf
 ├── Questionnarie.md
 ├── Task 01 - TechFix.md
 ├── Task 02 - GreenMarket.md
