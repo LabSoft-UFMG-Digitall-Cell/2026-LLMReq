@@ -118,8 +118,8 @@ Each row corresponds to a single participant submission and includes:
 - final mean score used in the analysis
 
 
-## Aplication to Analysis (2026-LLMREQ/docs/)
-All executable artifacts are in `2026-LLMREQ/docs/code/`:
+## Aplication to Analysis (2026-LLMREQ/code/)
+All executable artifacts are in `2026-LLMREQ/code/`:
 - `data/`: datasets and database initialization script  
 - `server/`: Dockerized FastAPI backend (must be running)  
 - `client/`: analysis scripts that generate the figures  
