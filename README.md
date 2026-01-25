@@ -61,11 +61,11 @@ This dataset contains participants’ self-reported background knowledge and exp
 
 This directory contains materials related to the thematic analysis of participant perceptions derived from feedback regarding llm usage.
 
-- Challenges: 👉 **[2026-LLMREQ/code/docs/participants/perceptions_thematic_analysis/Negative_Perception_Open_Coding](docs/participants/perceptions_thematic_analysis/Negative_Perception_Open_Coding.csv)**
+- 👉 **[Challenges Open Coding](docs/participants/perceptions_thematic_analysis/Negative_Perception_Open_Coding.csv)**
 
-- Benefits: 👉 **[2026-LLMREQ/code/docs/participants/perceptions_thematic_analysis/Positive_Perception_Open_Coding](docs/participants/perceptions_thematic_analysis/Positive_Perception_Open_Coding.csv)**
+- 👉 **[Benefits Open Coding](docs/participants/perceptions_thematic_analysis/Positive_Perception_Open_Coding.csv)**
   
-- Compilation: 👉 **[2026-LLMREQ/code/docs/participants/usage_llm_feedbacks.csv](docs/participants/usage_llm_feedbacks.csv)**
+- 👉 **[Positive and Negative Feedbacks](docs/participants/perceptions_thematic_analysis/usage_llm_feedbacks.csv)**
 
 ## Tasks Directory Structure
 
