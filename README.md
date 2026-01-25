@@ -39,7 +39,7 @@ The codebook defines all codes used in the thematic analysis, including definiti
 
 👉 **[2026-LLMREQ/code/docs/participants/interactions_thematic_analysis/CodeBook.md](docs/participants/interactions_thematic_analysis/CodeBook.md)**
 
-### Open Coding Documentation
+### Open Coding
 
 This document provides the open coding applied to the interaction data and supports traceability from codes back to participant interactions.
 
@@ -198,4 +198,5 @@ Shows user–LLM interaction flows as a Sankey diagram
 Option: 0
 ```
 - Terminates the program
+
 ---
