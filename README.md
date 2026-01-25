@@ -2,11 +2,11 @@
 
 This repository contains the replication package for the study.
 
-## Participants and Tasks Documentation (docs)
+## Participants and Tasks Documentation (2026-LLMREQ/docs/)
 
-The `2026-LLMREQ/code/docs/` directory contains all documentation artifacts related to participants and experimental tasks used in the study.
+The `2026-LLMREQ/docs/` directory contains all documentation artifacts related to participants and experimental tasks used in the study.
 
-### Directory structure
+### Participants Directory structure
 
 ```text
 docs/
@@ -23,9 +23,7 @@ docs/
 │   ├── knowledge_experience.csv
 │   ├── perceptions_thematic_analysis/
 │   └── usage_llm_feedbacks.csv
-│
-└── tasks/
-    └── tasks_results.csv
+│   (...)
 ```
 
 ### Raw Interaction Data (Shared Links)
@@ -68,6 +66,51 @@ This directory contains materials related to the thematic analysis of participan
 - Benefits: 👉 **[2026-LLMREQ/code/docs/participants/perceptions_thematic_analysis/Positive_Perception_Open_Coding](docs/participants/perceptions_thematic_analysis/Positive_Perception_Open_Coding.csv)**
   
 - Compilation: 👉 **[2026-LLMREQ/code/docs/participants/usage_llm_feedbacks.csv](docs/participants/usage_llm_feedbacks.csv)**
+
+## Tasks Directory Structure
+
+This directory contains all artifacts related to the **experimental tasks** executed by participants during the study.
+The tasks are designed to assess participants’ ability to perform **requirements elicitation activities** with and without the support of Large Language Models (LLMs).
+
+Each task requires participants to create a **user story** and **two use cases** (one main/normal flow and one alternative flow), following a predefined template.
+
+```
+docs/tasks/
+├── Background.md
+├── Questionnarie.md
+├── Task 01 - TechFix.md
+├── Task 02 - GreenMarket.md
+└── tasks_results.csv
+```
+
+### Background and Consent
+
+👉 **[Background.md](docs/tasks/Background.md)** contains the study background information and the informed consent form presented to participants prior to task execution.
+It explains the study objectives, participation conditions, and data usage policies.
+
+### Post-Task Questionnaire
+
+👉 **[Questionnarie.md](docs/tasks/Questionnarie.md)** includes the post-task questionnaire used to collect participants’ perceptions regarding task execution.
+
+### Tasks
+
+👉 **[Task 01 – TechFix.md](docs/tasks/Task01-TechFix.md)**: This task focuses on requirements elicitation for a **collaborative technical support platform**.
+
+👉 **[Task 02 – GreenMarket.md](docs/tasks/Task02-GreeMarket.md)**: This task addresses requirements elicitation for an **organic products marketplace application**.
+
+### Tasks Results Dataset
+
+👉 **[tasks_results.csv](tasks_results.csv)** consolidates all artifacts produced during task execution and their evaluations.
+
+Each row corresponds to a single participant submission and includes:
+- anonymized participant identifier
+- experimental group and task identifier
+- indication of LLM usage
+- user story description
+- main and alternative use case flows
+- task completion time (minutes)
+- independent evaluations from two PhD-level evaluators
+- final mean score used in the analysis
 
 
 ## Aplication to Analysis (code)
