@@ -54,16 +54,10 @@ This file aggregates information extracted from the shared interaction links int
 
 ### Background Knowledge and Experience
 
-This dataset contains participants’ self-reported background knowledge and experience levels and supports knowledge and experience distribution analyses.
+This dataset contains participants’ self-reported background knowledge and experience levels.
 
 👉 **[2026-LLMREQ/code/docs/participants/knowledge_experience.csv](docs/participants/knowledge_experience.csv)**
 
-
-### LLM Usage and Feedback
-
-This file includes participants’ feedback on LLM usage regarding the challenge and benefits percieved.
-
-👉 **[2026-LLMREQ/code/docs/participants/usage_llm_feedbacks.csv](docs/participants/usage_llm_feedbacks.csv)**
 
 ### Perceptions Thematic Analysis
 
@@ -72,6 +66,8 @@ This directory contains materials related to the thematic analysis of participan
 - Challenges: 👉 **[2026-LLMREQ/code/docs/participants/perceptions_thematic_analysis/Negative_Perception_Open_Coding](docs/participants/perceptions_thematic_analysis/Negative_Perception_Open_Coding.csv)**
 
 - Benefits: 👉 **[2026-LLMREQ/code/docs/participants/perceptions_thematic_analysis/Negative_Perception_Open_Coding](docs/participants/perceptions_thematic_analysis/Positive_Perception_Open_Coding.csv)**
+  
+- Compilation: 👉 **[2026-LLMREQ/code/docs/participants/usage_llm_feedbacks.csv](docs/participants/usage_llm_feedbacks.csv)**
 
 
 ## Aplication to Analysis (code)
@@ -200,3 +196,4 @@ Option: 0
 - Terminates the program
 
 ---
+
