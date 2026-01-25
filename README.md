@@ -65,7 +65,7 @@ This directory contains materials related to the thematic analysis of participan
 
 - Challenges: 👉 **[2026-LLMREQ/code/docs/participants/perceptions_thematic_analysis/Negative_Perception_Open_Coding](docs/participants/perceptions_thematic_analysis/Negative_Perception_Open_Coding.csv)**
 
-- Benefits: 👉 **[2026-LLMREQ/code/docs/participants/perceptions_thematic_analysis/Negative_Perception_Open_Coding](docs/participants/perceptions_thematic_analysis/Positive_Perception_Open_Coding.csv)**
+- Benefits: 👉 **[2026-LLMREQ/code/docs/participants/perceptions_thematic_analysis/Positive_Perception_Open_Coding](docs/participants/perceptions_thematic_analysis/Positive_Perception_Open_Coding.csv)**
   
 - Compilation: 👉 **[2026-LLMREQ/code/docs/participants/usage_llm_feedbacks.csv](docs/participants/usage_llm_feedbacks.csv)**
 
@@ -196,4 +196,5 @@ Option: 0
 - Terminates the program
 
 ---
+
 
