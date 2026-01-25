@@ -77,6 +77,7 @@ Each task requires participants to create a **user story** and **two use cases**
 ```
 docs/tasks/
 ├── Background.md
+├── Experiment Presentation.md
 ├── Questionnarie.md
 ├── Task 01 - TechFix.md
 ├── Task 02 - GreenMarket.md
@@ -87,6 +88,10 @@ docs/tasks/
 
 👉 **[Background.md](docs/tasks/Background.md)** contains the study background information and the informed consent form presented to participants prior to task execution.
 It explains the study objectives, participation conditions, and data usage policies.
+
+### Guidelines
+
+👉 **[Guidelines.pdf](docs/tasks/Guidelines.pdf)**: The experiment followed a standardized instructor presentation that defined the study context, task execution steps, experimental conditions (with/without LLM), and submission procedures,
 
 ### Post-Task Questionnaire
 
