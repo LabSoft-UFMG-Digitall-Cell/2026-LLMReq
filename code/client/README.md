@@ -39,19 +39,14 @@ source env/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
-
 ---
 
 ## ▶️ Running the Application
-
 Once the environment is ready, execute:
-
 ```bash
 python main.py
 ```
-
 You should see the following message:
-
 ```
 This is the main entry point for the client API.
 ```

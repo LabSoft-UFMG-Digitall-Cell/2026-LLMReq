@@ -115,3 +115,7 @@ def build_sankey_negative():
         left_nodes=["Learning", "Reliability"],
         output_name="sankey_negative"
     )
+
+if __name__ == "__main__":
+    print("Generating Positive LLM usage diagram...")
+    build_sankey_positive()
