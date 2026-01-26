@@ -17,9 +17,8 @@ if __name__ == "__main__":
             "5 - Specific Knowledge by Topic\n"
             "6 - Positive LLM usage diagram\n"
             "7 - Negative LLM usage diagram\n"
-            "8 - Boxplot LLM usage by LLM grade\n"
-            "9 - Open Coding Categorization\n"
-            "10 - Sankey Diagram\n"
+            "8 - Open Coding Categorization\n"
+            "9 - Sankey Diagram\n"
             "0 - Exit\n"
         )
 
